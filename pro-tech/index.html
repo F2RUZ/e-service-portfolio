@@ -21,6 +21,42 @@
       <link href="assets/css/styleguide.css" rel="stylesheet">
       <link href="assets/css/components.css" rel="stylesheet">
       <link href="assets/css/style-new.css" rel="stylesheet">
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        /* Mobile menu language switcher */
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        /* Animation for language switch */
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
       
    </head>
 
@@ -37,11 +73,11 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2 class="active">Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
+                    <h2 class="active" data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
                     <h2>Portfolio<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -49,20 +85,25 @@
             </div>
         </div>
         <main class="main" id="home" data-barba="container" data-barba-namespace="home" >
+            <!-- Mouse hover rasmlar - loyihalar preview uchun -->
             <div class="mouse-pos-list-image no-select">
                 <div class="mouse-pos-list-image-bounce overlay">
                     <div class="float-image-wrap">
+                        <!-- E-commerce loyiha rasmi -->
                         <li class="mouse-pos-list-image-inner development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1661956602116-aa6865609028?w=810&h=810&fit=crop&q=80"></div>
                         </li>
+                        <!-- CRM tizimi rasmi -->
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/the-damai/b511d32d21-1710452224/thumbnail-thedamai-v2-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=810&h=810&fit=crop&q=80"></div>
                         </li>
+                        <!-- Maktab boshqaruv paneli rasmi -->
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/fabric/ac07564a5f-1688453092/thumbnail-fabric-darkgray-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=810&h=810&fit=crop&q=80"></div>
                         </li>
+                        <!-- Mobile ilova rasmi -->
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/aanstekelijk/441187fb44-1687423090/thumbnail-aanstekelijk-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=810&h=810&fit=crop&q=80"></div>
                         </li>
                     </div>
                 </div>
@@ -75,7 +116,7 @@
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
+                        <!-- <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span> -->
                     </div>
                 </div>
             </div>
@@ -94,37 +135,44 @@
                             <li class="btn btn-link active">
                                 <a href="index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -161,12 +209,14 @@
             </div>
             <div class="main-wrap" data-scroll-container>
 <header class="section home-header theme-dark" data-scroll-section>
+   <!-- Header background rasm - dizayner/dasturchi rasm -->
+   <!-- O'z rasmingizni qo'yishingiz mumkin: assets/img/DSC07033-Cut-Color-1080.png -->
    <div class="overlay personal-image no-select once-in" data-scroll data-scroll-speed="-3" data-scroll-position="top">
-      <img src="assets/img/DSC07033-Cut-Color-1080.png"/>
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1080&h=1920&fit=crop&q=80" alt="Developer workspace"/>
    </div>
    <div class="overlay get-height once-in once-in-secondary">
       <div class="hanger">
-         <p><span>O'zbekiston, </span><span>Toshkent </span><span>shahrida</span></p>
+         <p><span data-i18n="header.location">O'zbekiston, Toshkent shahrida</span></p>
          <?xml version="1.0" encoding="UTF-8"?>
 <svg width="300px" height="121px" viewBox="0 0 300 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Combined Shape</title>
@@ -205,31 +255,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+            <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link">
             <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -252,14 +316,14 @@
     </g>
 </svg></div>
             </div>
-            <h4><span>Professional</span> Web Dasturlash Xizmatlari</h4>
+            <h4><span>Professional</span> <span data-i18n="header.subtitle">Web Dasturlash Xizmatlari</span></h4>
          </div>
       </div>
    </div>
    <div class="big-name">
       <div class="name-h1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-position="top">
          <div class="name-wrap">
-            <h1 class="no-select once-in once-in-secondary">Euphoria Service<span class="spacer">—</span></h1>
+            <h1 class="no-select once-in once-in-secondary" data-i18n="header.tagline">Euphoria Service<span class="spacer">—</span></h1>
          </div>
       </div>
    </div>
@@ -270,17 +334,17 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h4 class="span-lines animate">Brendingizni raqamli davrda ajralib turishi uchun yordam beramiz. Biz bilan yangi standartlar o'rnatamiz. Hech qanday ortiqcha gap-so'z yo'q, doimo eng zamonaviy texnologiyalar bilan.</h4>
+            <h4 class="span-lines animate" data-i18n="intro.title">Brendingizni raqamli davrda ajralib turishi uchun yordam beramiz. Biz bilan yangi standartlar o'rnatamiz. Hech qanday ortiqcha gap-so'z yo'q, doimo eng zamonaviy texnologiyalar bilan.</h4>
          </div>
          <div class="flex-col">
             <div class="text-wrap fade-in animate">
-               <p>Dizayn, dasturlash va interaktiv web saytlar yaratishga bo'lgan ishtiyoqimiz bizni web dasturlash sohasida noyob joyga qo'yadi.</p>
+               <p data-i18n="intro.description">Dizayn, dasturlash va interaktiv web saytlar yaratishga bo'lgan ishtiyoqimiz bizni web dasturlash sohasida noyob joyga qo'yadi.</p>
             </div>
             <div class="btn btn-round" data-scroll data-scroll-speed="2">
                <a href="about.html" class="btn-click magnetic " data-strength="100" data-strength-text="50">
                   <div class="btn-fill"></div>
                   <span class="btn-text">
-                     <span class="btn-text-inner">Biz haqimizda</span>
+                     <span class="btn-text-inner" data-i18n="intro.aboutBtn">Biz haqimizda</span>
                   </span>
                </a>
             </div>
@@ -293,7 +357,7 @@
    <div class="container">
       <div class="grid-sub-title">
          <div class="flex-col">
-            <h5>Bizning xizmatlar</h5>
+            <h5 data-i18n="services.title">Bizning xizmatlar</h5>
          </div>
       </div>
       <ul class="work-items mouse-pos-list-image-wrap">
@@ -301,10 +365,10 @@
             <div class="stripe animate"></div>
             <a href="work/crm.html" class="row">
                <div class="flex-col">
-                  <h4><span>Frontend Development</span></h4>
+                  <h4><span data-i18n="services.frontend">Frontend Development</span></h4>
                </div>
                <div class="flex-col animate">
-                  <p>Vue.js, React.js, Next.js, Nuxt.js</p>
+                  <p data-i18n="services.frontendDesc">Vue.js, React.js, Next.js, Nuxt.js</p>
                </div>
             </a>
          </li>
@@ -312,10 +376,10 @@
             <div class="stripe animate"></div>
             <a href="work/school.html" class="row">
                <div class="flex-col">
-                  <h4><span>Backend Development</span></h4>
+                  <h4><span data-i18n="services.backend">Backend Development</span></h4>
                </div>
                <div class="flex-col animate">
-                  <p>Python FastAPI, Node.js, Nest.js</p>
+                  <p data-i18n="services.backendDesc">Python FastAPI, Node.js, Nest.js</p>
                </div>
             </a>
          </li>
@@ -323,10 +387,10 @@
             <div class="stripe animate"></div>
             <a href="work/mobile-app.html" class="row">
                <div class="flex-col">
-                  <h4><span>Mobile Development</span></h4>
+                  <h4><span data-i18n="services.mobile">Mobile Development</span></h4>
                </div>
                <div class="flex-col animate">
-                  <p>React Native (Expo)</p>
+                  <p data-i18n="services.mobileDesc">React Native (Expo)</p>
                </div>
             </a>
          </li>
@@ -334,10 +398,10 @@
             <div class="stripe animate"></div>
             <a href="work/ecommerce.html" class="row">
                <div class="flex-col">
-                  <h4><span>E-Commerce Yechimlari</span></h4>
+                  <h4><span data-i18n="services.ecommerce">E-Commerce Yechimlari</span></h4>
                </div>
                <div class="flex-col animate">
-                  <p>To'liq onlayn savdo platformalari</p>
+                  <p data-i18n="services.ecommerceDesc">To'liq onlayn savdo platformalari</p>
                </div>
             </a>
          </li>
@@ -349,20 +413,21 @@
 <section class="section work-tiles work-tiles-home" data-scroll-section>
    <div class="container">
       <ul>
+         <!-- Frontend Development tile - Vue/React loyiha rasmi -->
          <li class="development interaction visible">
             <div class="single-tile-wrap">
                <a href="work/crm.html" class="row">
                   <div class="flex-col">
                      <div class="tile-image">
-                        <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice.jpg"></div>
+                        <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop&q=80"></div>
                      </div>
                   </div>
                   <div class="flex-col">
-                     <h4><span>Frontend Development</span></h4>
+                     <h4><span data-i18n="services.frontend">Frontend Development</span></h4>
                      <div class="stripe"></div>
                   </div>
                   <div class="flex-col">
-                     <p>Vue.js, React.js, Next.js, Nuxt.js</p>
+                     <p data-i18n="services.frontendDesc">Vue.js, React.js, Next.js, Nuxt.js</p>
                   </div>
                   <div class="flex-col">
                      <p>2025</p>
@@ -370,20 +435,21 @@
                </a>
             </div>
          </li>
+         <!-- Backend Development tile - Server/Database rasmi -->
          <li class="design development interaction visible">
             <div class="single-tile-wrap">
                <a href="work/school.html" class="row">
                   <div class="flex-col">
                      <div class="tile-image">
-                        <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/the-damai/b511d32d21-1710452224/thumbnail-thedamai-v2.jpg"></div>
+                        <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=800&fit=crop&q=80"></div>
                      </div>
                   </div>
                   <div class="flex-col">
-                     <h4><span>Backend Development</span></h4>
+                     <h4><span data-i18n="services.backend">Backend Development</span></h4>
                      <div class="stripe"></div>
                   </div>
                   <div class="flex-col">
-                     <p>Python FastAPI, Node.js, Nest.js</p>
+                     <p data-i18n="services.backendDesc">Python FastAPI, Node.js, Nest.js</p>
                   </div>
                   <div class="flex-col">
                      <p>2025</p>
@@ -391,20 +457,21 @@
                </a>
             </div>
          </li>
+         <!-- Mobile Development tile - Telefon/Mobile app rasmi -->
          <li class="design development interaction visible">
             <div class="single-tile-wrap">
                <a href="work/mobile-app.html" class="row">
                   <div class="flex-col">
                      <div class="tile-image">
-                        <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/fabric/ac07564a5f-1688453092/thumbnail-fabric-darkgray.jpg"></div>
+                        <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=800&fit=crop&q=80"></div>
                      </div>
                   </div>
                   <div class="flex-col">
-                     <h4><span>Mobile Development</span></h4>
+                     <h4><span data-i18n="services.mobile">Mobile Development</span></h4>
                      <div class="stripe"></div>
                   </div>
                   <div class="flex-col">
-                     <p>React Native (Expo)</p>
+                     <p data-i18n="services.mobileDesc">React Native (Expo)</p>
                   </div>
                   <div class="flex-col">
                      <p>2025</p>
@@ -412,20 +479,21 @@
                </a>
             </div>
          </li>
+         <!-- E-commerce tile - Online shopping/cart rasmi -->
          <li class="design development interaction visible">
             <div class="single-tile-wrap">
                <a href="work/ecommerce.html" class="row">
                   <div class="flex-col">
                      <div class="tile-image">
-                        <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/aanstekelijk/441187fb44-1687423090/thumbnail-aanstekelijk.jpg"></div>
+                        <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=800&fit=crop&q=80"></div>
                      </div>
                   </div>
                   <div class="flex-col">
-                     <h4><span>E-Commerce Platformalar</span></h4>
+                     <h4><span data-i18n="services.ecommerce">E-Commerce Platformalar</span></h4>
                      <div class="stripe"></div>
                   </div>
                   <div class="flex-col">
-                     <p>To'liq onlayn savdo yechimlari</p>
+                     <p data-i18n="services.ecommerceDesc">To'liq onlayn savdo yechimlari</p>
                   </div>
                   <div class="flex-col">
                      <p>2025</p>
@@ -444,7 +512,7 @@
             <a href="work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                <div class="btn-fill"></div>
                <span class="btn-text">
-                  <span class="btn-text-inner change">Barcha xizmatlar</span>
+                  <span class="btn-text-inner change" data-i18n="services.allServices">Barcha xizmatlar</span>
                </span>
             </a>
          </div>
@@ -452,49 +520,60 @@
    </div>
 </section>
 
+<!-- Horizontal scroll rasmlar va videolar - ish jarayoni ko'rinishi -->
 <section class="section horizontal-items" data-scroll-section>
    <div class="container">    
+      <!-- Birinchi qator - chapdan o'ngga -->
       <div class="row row-1" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+         <!-- Workspace/Office rasm -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="assets/img/home-item-1.jpg"></div>
+               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80"></div>
             </div>
          </div>
+         <!-- Kod yozish video (o'z videongiz bo'lsa almashtiring) -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay playpauze"><video class="overlay lazy" src="assets/img/home-item-2.mp4" loop muted playsinline></video></div>
+               <div class="overlay playpauze"><video class="overlay lazy" src="https://cdn.coverr.co/videos/coverr-programming-code-on-screen-6966/1080p.mp4" loop muted playsinline></video></div>
             </div>
          </div>
+         <!-- Team meeting/collaboration rasm -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="assets/img/home-item-3.jpg"></div>
+               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"></div>
             </div>
          </div>
+         <!-- Web design video (o'z videongiz bo'lsa almashtiring) -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay playpauze"><video class="overlay lazy" src="assets/img/home-item-4.mp4" loop muted playsinline></video></div>
+               <div class="overlay playpauze"><video class="overlay lazy" src="https://cdn.coverr.co/videos/coverr-typing-code-on-laptop-6967/1080p.mp4" loop muted playsinline></video></div>
             </div>
          </div>
       </div>
+      <!-- Ikkinchi qator - o'ngdan chapga -->
       <div class="row row-2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+         <!-- Mobile app development video -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay playpauze"><video class="overlay lazy" src="assets/img/home-item-5.mp4" loop muted playsinline></video></div>
+               <div class="overlay playpauze"><video class="overlay lazy" src="https://cdn.coverr.co/videos/coverr-hands-typing-code-on-laptop-6968/1080p.mp4" loop muted playsinline></video></div>
             </div>
          </div>
+         <!-- Creative workspace rasm -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="assets/img/home-item-6.jpg"></div>
+               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop&q=80"></div>
             </div>
          </div>
+         <!-- Development process video -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay playpauze"><video class="overlay lazy" src="assets/img/home-item-7.mp4" loop muted playsinline></video></div>
+               <div class="overlay playpauze"><video class="overlay lazy" src="https://cdn.coverr.co/videos/coverr-developer-coding-on-computer-6969/1080p.mp4" loop muted playsinline></video></div>
             </div>
          </div>
+         <!-- Technology/Innovation rasm -->
          <div class="flex-col">
             <div class="horizontal-single-item">
-               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="assets/img/home-item-8.jpg"></div>
+               <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop&q=80"></div>
             </div>
          </div>
       </div>
@@ -523,7 +602,7 @@
         </g>
     </g>
 </svg></div>
-                    <h2><span><div class="profile-picture"></div> Keling birga  </span><span>ishlaymiz</span></h2>
+                    <h2><span><div class="profile-picture"></div><span data-i18n="footer.workTogether">Keling birga ishlaymiz</span></span></h2>
                 </div>
             </div>
             <div class="row">
@@ -534,7 +613,7 @@
                             <a href="contact.html" class="btn-click magnetic " data-strength="100" data-strength-text="50">
                                 <div class="btn-fill"></div>
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bog'lanish</span>
+                                    <span class="btn-text-inner" data-i18n="footer.contactBtn">Bog'lanish</span>
                                 </span>
                             </a>
                         </div>
@@ -566,17 +645,17 @@
             <div class="row bottom-footer">
                 <div class="flex-col">
                     <div class="credits">
-                        <h5>Versiya</h5>
-                        <p>2025 © Nashr</p>
+                        <h5 data-i18n="footer.version">Versiya</h5>
+                        <p data-i18n="footer.versionText">2025 © Nashr</p>
                     </div>
                     <div class="time">
-                        <h5>Mahalliy vaqt</h5>
+                        <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                         <p><span id="timeSpan">09:41 PM UZT</span></p>
                     </div>
                 </div>
                 <div class="flex-col">
                     <div class="socials">
-                        <h5>Ijtimoiy tarmoqlar</h5>
+                        <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                         <ul>
                             <li class="btn btn-link btn-link-external">
                                 <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -625,6 +704,7 @@
         <script src="../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="assets/js/locomotive-scroll.min.js"></script>
+        <script src="assets/js/i18n.js"></script>
         <script defer src="assets/js/index-new.js"></script>
     </body>
 

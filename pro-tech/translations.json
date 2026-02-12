@@ -1,0 +1,403 @@
+{
+  "uz": {
+    "nav": {
+      "home": "Bosh sahifa",
+      "services": "Xizmatlar",
+      "about": "Biz haqimizda",
+      "contact": "Aloqa",
+      "menu": "Menyu"
+    },
+    "header": {
+      "location": "O'zbekiston, Toshkent shahrida",
+      "subtitle": "Professional Web Dasturlash Xizmatlari",
+      "tagline": "Euphoria Service"
+    },
+    "intro": {
+      "title": "Brendingizni raqamli davrda ajralib turishi uchun yordam beramiz. Biz bilan yangi standartlar o'rnatamiz. Hech qanday ortiqcha gap-so'z yo'q, doimo eng zamonaviy texnologiyalar bilan.",
+      "description": "Dizayn, dasturlash va interaktiv web saytlar yaratishga bo'lgan ishtiyoqimiz bizni web dasturlash sohasida noyob joyga qo'yadi.",
+      "aboutBtn": "Biz haqimizda"
+    },
+    "services": {
+      "title": "Bizning xizmatlar",
+      "frontend": "Frontend Development",
+      "frontendDesc": "Vue.js, React.js, Next.js, Nuxt.js",
+      "backend": "Backend Development",
+      "backendDesc": "Python FastAPI, Node.js, Nest.js",
+      "mobile": "Mobile Development",
+      "mobileDesc": "React Native (Expo)",
+      "ecommerce": "E-Commerce Yechimlari",
+      "ecommerceDesc": "To'liq onlayn savdo platformalari",
+      "allServices": "Barcha xizmatlar"
+    },
+    "about": {
+      "title": "Brendlarni raqamli dunyoda rivojlantirishga yordam beramiz",
+      "description1": "Biz butun dunyo bo'ylab kompaniyalarga maxsus yechimlarda yordam beramiz. Har bir loyiha bilan ishimizni yangi cho'qqilarga olib chiqamiz, sifatni doimo birinchi o'ringa qo'yamiz.",
+      "description2": "Doimo izlanishda",
+      "servicesTitle": "Sizga quyidagilarda yordam bera olamiz",
+      "service1Title": "Frontend Development",
+      "service1Desc": "Zamonaviy texnologiyalar yordamida kuchli va foydalanuvchilarga qulay veb-saytlar yaratamiz. Vue.js, React.js, Next.js va Nuxt.js framework'larida professional darajada ishlaymiz. Har bir loyihani responsive va interaktiv qilib yaratamiz.",
+      "service2Title": "Backend Development",
+      "service2Desc": "Miqyoslanuvchi va xavfsiz server qismini noldan yaratamiz. Python FastAPI, Node.js va Nest.js yordamida kuchli API'lar va ma'lumotlar bazasi bilan ishlash tizimlarini qurамiz. To'liq RESTful va GraphQL xizmatlari.",
+      "service3Title": "To'liq paket",
+      "service3Desc": "Konsepsiyadan tortib to ishga tushirishgacha to'liq veb-sayt - bu bizni ajratib turadi. Dizayn va dasturlashdagi kuchli malakalarimiz ajoyib loyihalar yaratishga imkon beradi. E-commerce platformalar, CRM tizimlari, maktab boshqaruv panellari va mobil ilovalar.",
+      "teamTitle": "Professional jamoa '20-25",
+      "teamDesc": "Biz professional dasturchilar jamoasimiz. Har bir loyihada eng yangi texnologiyalardan foydalanamiz va mijozlarimizga eng yuqori sifatli xizmat ko'rsatamiz. Tez, sifatli va hamyonbop narxlarda ishlaymiz. O'z brendingizni rivojlantirmoqchi bo'lgan tadbirkorlar, tur agentliklari va tijoratini onlayn olib borishni xohlovchi kompaniyalar uchun to'liq yechimlar taqdim etamiz."
+    },
+    "contact": {
+      "title": "Keling loyihani birga boshlaylik",
+      "contactInfo": "Aloqa ma'lumotlari",
+      "businessInfo": "Biznes ma'lumotlari",
+      "company": "Euphoria Service",
+      "location": "Joylashuv: O'zbekistan, Toshkent",
+      "form": {
+        "field01": "Ismingiz nima?",
+        "field01Placeholder": "Sardor Aliyev *",
+        "field02": "Email manzilingiz?",
+        "field02Placeholder": "sardor@example.com *",
+        "field03": "Kompaniyangiz nomi?",
+        "field03Placeholder": "Kompaniya nomi",
+        "field04": "Qanday xizmatlar kerak?",
+        "field04Placeholder": "Web Dizayn, Web Dasturlash, Mobile Ilova ...",
+        "field05": "Xabaringiz",
+        "field05Placeholder": "Assalomu alaykum, menga ... da yordam bera olasizmi? *",
+        "submitBtn": "Yuborish!"
+      }
+    },
+    "footer": {
+      "workTogether": "Keling birga ishlaymiz",
+      "contactBtn": "Bog'lanish",
+      "version": "Versiya",
+      "versionText": "2025 © Nashr",
+      "localTime": "Mahalliy vaqt",
+      "socials": "Ijtimoiy tarmoqlar"
+    },
+    "work": {
+      "title1": "Keyingi bosqich",
+      "title2": "raqamli mahsulotlar",
+      "filters": {
+        "all": "Hammasi",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "viewLabel": "Ko'rish"
+      },
+      "grid": {
+        "client": "Mijoz",
+        "location": "Joylashuv",
+        "services": "Xizmatlar",
+        "year": "Yil"
+      },
+      "projects": {
+        "ecommerce": {
+          "title": "E-Commerce Platform",
+          "location": "O'zbekiston",
+          "services": "Full-Stack Development",
+          "year": "2024"
+        },
+        "crm": {
+          "title": "CRM Tizimi",
+          "location": "Toshkent, O'zbekiston",
+          "services": "Backend & Frontend",
+          "year": "2024"
+        },
+        "school": {
+          "title": "Maktab Boshqaruv Paneli",
+          "location": "O'zbekiston",
+          "services": "Full-Stack Development",
+          "year": "2023"
+        },
+        "tour": {
+          "title": "Tur Agentligi Web Sayti",
+          "location": "Samarqand, O'zbekiston",
+          "services": "Design & Development",
+          "year": "2023"
+        },
+        "mobile": {
+          "title": "Mobile Ilova (React Native)",
+          "location": "O'zbekiston",
+          "services": "Mobile Development",
+          "year": "2024"
+        },
+        "corporate": {
+          "title": "Korporativ Web Sayt",
+          "location": "Rossiya",
+          "services": "Frontend Development",
+          "year": "2023"
+        },
+        "restaurant": {
+          "title": "Restoran Boshqaruv Tizimi",
+          "location": "Toshkent",
+          "services": "Full-Stack Development",
+          "year": "2022"
+        },
+        "portfolio": {
+          "title": "Portfolio Web Sayti",
+          "location": "O'zbekiston",
+          "services": "Frontend Development",
+          "year": "2022"
+        },
+        "api": {
+          "title": "RESTful API Xizmati",
+          "location": "AQSH",
+          "services": "Backend Development",
+          "year": "2021"
+        },
+        "landing": {
+          "title": "Landing Page",
+          "location": "O'zbekiston",
+          "services": "Frontend Development",
+          "year": "2021"
+        },
+        "dashboard": {
+          "title": "Admin Dashboard",
+          "location": "Qozog'iston",
+          "services": "Full-Stack Development",
+          "year": "2020"
+        }
+      }
+    },
+    "projectPages": {
+      "api": {
+        "title": "RESTful API Development",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "backend": "Backend Development",
+          "architecture": "API Arxitekturasi"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "nodejs": "Node.js / NestJS",
+          "python": "Python / FastAPI",
+          "database": "PostgreSQL / MongoDB"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "webDev": {
+        "title": "Web Development",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "fullstack": "Frontend & Backend",
+          "design": "Dizayn va Ishlab chiqish"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "frontend": "Vue.js, React, Next.js",
+          "backend": "Node.js, NestJS"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      }
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "services": "Услуги",
+      "about": "О нас",
+      "contact": "Контакты",
+      "menu": "Меню"
+    },
+    "header": {
+      "location": "Узбекистан, город Ташкент",
+      "subtitle": "Профессиональные Услуги Веб-Разработки",
+      "tagline": "Euphoria Service"
+    },
+    "intro": {
+      "title": "Помогаем вашему бренду выделиться в цифровую эпоху. Устанавливаем новые стандарты вместе. Никаких лишних слов, только самые современные технологии.",
+      "description": "Наша страсть к дизайну, программированию и созданию интерактивных веб-сайтов ставит нас на уникальное место в сфере веб-разработки.",
+      "aboutBtn": "О нас"
+    },
+    "services": {
+      "title": "Наши услуги",
+      "frontend": "Frontend Разработка",
+      "frontendDesc": "Vue.js, React.js, Next.js, Nuxt.js",
+      "backend": "Backend Разработка",
+      "backendDesc": "Python FastAPI, Node.js, Nest.js",
+      "mobile": "Мобильная Разработка",
+      "mobileDesc": "React Native (Expo)",
+      "ecommerce": "E-Commerce Решения",
+      "ecommerceDesc": "Полноценные платформы онлайн-торговли",
+      "allServices": "Все услуги"
+    },
+    "about": {
+      "title": "Помогаем брендам развиваться в цифровом мире",
+      "description1": "Мы помогаем компаниям по всему миру с индивидуальными решениями. С каждым проектом мы выводим нашу работу на новые высоты, всегда ставя качество на первое место.",
+      "description2": "Всегда в поиске",
+      "servicesTitle": "Мы можем помочь вам в следующем",
+      "service1Title": "Frontend Разработка",
+      "service1Desc": "Создаем мощные и удобные для пользователей веб-сайты с использованием современных технологий. Работаем профессионально с фреймворками Vue.js, React.js, Next.js и Nuxt.js. Создаем каждый проект адаптивным и интерактивным.",
+      "service2Title": "Backend Разработка",
+      "service2Desc": "Создаем масштабируемую и безопасную серверную часть с нуля. Строим мощные API и системы работы с базами данных с помощью Python FastAPI, Node.js и Nest.js. Полные сервисы RESTful и GraphQL.",
+      "service3Title": "Полный пакет",
+      "service3Desc": "Полноценный веб-сайт от концепции до запуска - вот что нас отличает. Наши сильные навыки в дизайне и программировании позволяют создавать потрясающие проекты. E-commerce платформы, CRM системы, панели управления школами и мобильные приложения.",
+      "teamTitle": "Профессиональная команда '20-25",
+      "teamDesc": "Мы команда профессиональных программистов. Используем самые новые технологии в каждом проекте и предоставляем нашим клиентам услуги высочайшего качества. Работаем быстро, качественно и по доступным ценам. Предлагаем полные решения для предпринимателей, желающих развивать свой бренд, туристических агентств и компаний, желающих вести свой бизнес онлайн."
+    },
+    "contact": {
+      "title": "Давайте начнем проект вместе",
+      "contactInfo": "Контактная информация",
+      "businessInfo": "Деловая информация",
+      "company": "Euphoria Service",
+      "location": "Местоположение: Узбекистан, Ташкент",
+      "form": {
+        "field01": "Как вас зовут?",
+        "field01Placeholder": "Иван Иванов *",
+        "field02": "Ваш email адрес?",
+        "field02Placeholder": "ivan@example.com *",
+        "field03": "Название компании?",
+        "field03Placeholder": "Название компании",
+        "field04": "Какие услуги нужны?",
+        "field04Placeholder": "Веб Дизайн, Веб Разработка, Мобильное Приложение ...",
+        "field05": "Ваше сообщение",
+        "field05Placeholder": "Здравствуйте, можете ли вы помочь мне с ...? *",
+        "submitBtn": "Отправить!"
+      }
+    },
+    "footer": {
+      "workTogether": "Давайте работать вместе",
+      "contactBtn": "Связаться",
+      "version": "Версия",
+      "versionText": "2025 © Издание",
+      "localTime": "Местное время",
+      "socials": "Социальные сети"
+    },
+    "work": {
+      "title1": "Следующий уровень",
+      "title2": "цифровых продуктов",
+      "filters": {
+        "all": "Все",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "viewLabel": "Просмотр"
+      },
+      "grid": {
+        "client": "Клиент",
+        "location": "Местоположение",
+        "services": "Услуги",
+        "year": "Год"
+      },
+      "projects": {
+        "ecommerce": {
+          "title": "E-Commerce Платформа",
+          "location": "Узбекистан",
+          "services": "Full-Stack Разработка",
+          "year": "2024"
+        },
+        "crm": {
+          "title": "CRM Система",
+          "location": "Ташкент, Узбекистан",
+          "services": "Backend & Frontend",
+          "year": "2024"
+        },
+        "school": {
+          "title": "Панель Управления Школой",
+          "location": "Узбекистан",
+          "services": "Full-Stack Разработка",
+          "year": "2023"
+        },
+        "tour": {
+          "title": "Сайт Туристического Агентства",
+          "location": "Самарканд, Узбекистан",
+          "services": "Дизайн & Разработка",
+          "year": "2023"
+        },
+        "mobile": {
+          "title": "Мобильное Приложение (React Native)",
+          "location": "Узбекистан",
+          "services": "Мобильная Разработка",
+          "year": "2024"
+        },
+        "corporate": {
+          "title": "Корпоративный Веб-Сайт",
+          "location": "Россия",
+          "services": "Frontend Разработка",
+          "year": "2023"
+        },
+        "restaurant": {
+          "title": "Система Управления Рестораном",
+          "location": "Ташкент",
+          "services": "Full-Stack Разработка",
+          "year": "2022"
+        },
+        "portfolio": {
+          "title": "Портфолио Веб-Сайт",
+          "location": "Узбекистан",
+          "services": "Frontend Разработка",
+          "year": "2022"
+        },
+        "api": {
+          "title": "RESTful API Сервис",
+          "location": "США",
+          "services": "Backend Разработка",
+          "year": "2021"
+        },
+        "landing": {
+          "title": "Посадочная Страница",
+          "location": "Узбекистан",
+          "services": "Frontend Разработка",
+          "year": "2021"
+        },
+        "dashboard": {
+          "title": "Админ Панель",
+          "location": "Казахстан",
+          "services": "Full-Stack Разработка",
+          "year": "2020"
+        }
+      }
+    },
+    "projectPages": {
+      "api": {
+        "title": "RESTful API Разработка",
+        "role": "Роль / Услуги",
+        "services": {
+          "backend": "Backend Разработка",
+          "architecture": "API Архитектура"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "nodejs": "Node.js / NestJS",
+          "python": "Python / FastAPI",
+          "database": "PostgreSQL / MongoDB"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+
+      "webDev": {
+        "title": "Web Разработка",
+        "role": "Роль / Услуги",
+        "services": {
+          "fullstack": "Frontend & Backend",
+          "design": "Дизайн и Разработка"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "frontend": "Vue.js, React, Next.js",
+          "backend": "Node.js, NestJS"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      }
+    }
+  }
+}

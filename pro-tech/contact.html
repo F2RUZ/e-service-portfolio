@@ -22,6 +22,43 @@
       <link href="assets/css/components.css" rel="stylesheet">
       <link href="assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        /* Mobile menu language switcher */
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        /* Animation for language switch */
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,10 +74,10 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2 class="active">Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 class="active" data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -53,7 +90,6 @@
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -72,37 +108,44 @@
                             <li class="btn btn-link">
                                 <a href="index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -150,31 +193,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+              <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link">
             <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link active">
             <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -183,7 +240,7 @@
    <div class="container medium">
       <div class="row once-in">
          <div class="flex-col">
-            <h1><span><div class="profile-picture"></div> Keling loyihani </span><span>birga boshlaylik</span></h1>
+            <h1><span><div class="profile-picture"></div><span data-i18n="contact.title">Keling loyihani birga boshlaylik</span></span></h1>
          </div>
          <div class="flex-col">
             <div class="profile-picture"></div>
@@ -210,35 +267,35 @@
                </div>
                <div class="form-col">
                   <h5>01</h5>
-                  <label class="label" for="name">Ismingiz nima?</label>
-                  <input class="field" type="text" id="form-name" name="name" value="" required placeholder="Sardor Aliyev *">
+                  <label class="label" for="name" data-i18n="contact.form.field01">Ismingiz nima?</label>
+                  <input class="field" type="text" id="form-name" name="name" value="" required data-i18n-placeholder="contact.form.field01Placeholder" placeholder="Sardor Aliyev *">
                </div>
                <div class="form-col">
                   <h5>02</h5>
-                  <label class="label" for="email">Email manzilingiz?</label>
-                  <input class="field" type="email" id="form-email" name="email" value="" required placeholder="sardor@example.com *">
+                  <label class="label" for="email" data-i18n="contact.form.field02">Email manzilingiz?</label>
+                  <input class="field" type="email" id="form-email" name="email" value="" required data-i18n-placeholder="contact.form.field02Placeholder" placeholder="sardor@example.com *">
                </div>
                <div class="form-col">
                   <h5>03</h5>
-                  <label class="label" for="email">Kompaniyangiz nomi?</label>
-                  <input class="field" type="text" id="form-company" name="company" value="" required placeholder="Kompaniya nomi">
+                  <label class="label" for="company" data-i18n="contact.form.field03">Kompaniyangiz nomi?</label>
+                  <input class="field" type="text" id="form-company" name="company" value="" required data-i18n-placeholder="contact.form.field03Placeholder" placeholder="Kompaniya nomi">
                </div>
                <div class="form-col">
                   <h5>04</h5>
-                  <label class="label" for="email">Qanday xizmatlar kerak?</label>
-                  <input class="field" type="text" id="form-service" name="service" value="" required placeholder="Web Dizayn, Web Dasturlash, Mobile Ilova ...">
+                  <label class="label" for="service" data-i18n="contact.form.field04">Qanday xizmatlar kerak?</label>
+                  <input class="field" type="text" id="form-service" name="service" value="" required data-i18n-placeholder="contact.form.field04Placeholder" placeholder="Web Dizayn, Web Dasturlash, Mobile Ilova ...">
                </div>
                <div class="form-col">
                   <h5>05</h5>
-                  <label class="label" for="message">Xabaringiz</label>
-                  <textarea class="field" type="text" id="form-message" name="message" rows="8"  required placeholder="Assalomu alaykum, menga ... da yordam bera olasizmi? *"></textarea>
+                  <label class="label" for="message" data-i18n="contact.form.field05">Xabaringiz</label>
+                  <textarea class="field" type="text" id="form-message" name="message" rows="8" required data-i18n-placeholder="contact.form.field05Placeholder" placeholder="Assalomu alaykum, menga ... da yordam bera olasizmi? *"></textarea>
                </div>
                <div class="btn-contact-send">
                   <div class="btn btn-round" data-scroll data-scroll-speed="2" data-scroll-offset="-50%, 0%">
                      <div class="btn-click magnetic" data-strength="100" data-strength-text="50">
                         <div class="btn-fill"></div>
                         <span class="btn-text">
-                           <input type="submit" name="submit" value="Yuborish!" class="form-btn">
+                           <input type="submit" name="submit" data-i18n-value="contact.form.submitBtn" value="Yuborish!" class="form-btn">
                         </span>
                      </div>
                   </div>
@@ -246,7 +303,7 @@
             </form>
          </div>
          <div class="flex-col">
-            <h5>Aloqa ma'lumotlari</h5>
+            <h5 data-i18n="contact.contactInfo">Aloqa ma'lumotlari</h5>
             <ul class="links-wrap">
                <li class="btn btn-link btn-link-external">
                   <a href="mailto:info@euphoriaservice.uz" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -263,14 +320,14 @@
                   </a>
                </li>
             </ul>
-            <h5>Biznes ma'lumotlari</h5>
+            <h5 data-i18n="contact.businessInfo">Biznes ma'lumotlari</h5>
             <ul class="links-wrap">
-               <li><p>Euphoria Service</p></li>
+               <li><p data-i18n="contact.company">Euphoria Service</p></li>
                <li><p>STIR: 123456789</p></li>
                <li><p>OKED: 62010</p></li>
-               <li><p>Joylashuv: O'zbekiston, Toshkent</p></li>
+               <li><p data-i18n="contact.location">Joylashuv: O'zbekiston, Toshkent</p></li>
             </ul>
-            <h5>Ijtimoiy tarmoqlar</h5>
+            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
             <ul class="links-wrap">
                <li class="btn btn-link btn-link-external">
                   <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -311,17 +368,17 @@
         <div class="row bottom-footer">
             <div class="flex-col">
                 <div class="credits">
-                    <h5>Versiya</h5>
-                    <p>2025 © Nashr</p>
+                    <h5 data-i18n="footer.version">Versiya</h5>
+                    <p data-i18n="footer.versionText">2025 © Nashr</p>
                 </div>
                 <div class="time">
-                    <h5>Mahalliy vaqt</h5>
+                    <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                     <p><span id="timeSpan">09:41 PM UZT</span></p>
                 </div>
             </div>
             <div class="flex-col">
                 <div class="socials">
-                    <h5>Ijtimoiy tarmoqlar</h5>
+                    <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                     <ul>
                         <li class="btn btn-link btn-link-external">
                             <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -368,6 +425,7 @@
         <script src="../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="assets/js/locomotive-scroll.min.js"></script>
+        <script src="assets/js/i18n.js"></script>
         <script defer src="assets/js/index-new.js"></script>
     </body>
 

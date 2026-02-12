@@ -22,6 +22,43 @@
       <link href="assets/css/components.css" rel="stylesheet">
       <link href="assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        /* Mobile menu language switcher */
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        /* Animation for language switch */
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,10 +74,10 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2 class="active">Xizmatlar<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 class="active" data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -52,50 +89,49 @@
                 <div class="mouse-pos-list-image-bounce overlay">
                     <div class="float-image-wrap">
                         <li class="mouse-pos-list-image-inner development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1661956602116-aa6865609028?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/the-damai/b511d32d21-1710452224/thumbnail-thedamai-v2-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/fabric/ac07564a5f-1688453092/thumbnail-fabric-darkgray-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/aanstekelijk/441187fb44-1687423090/thumbnail-aanstekelijk-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner development interaction design visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #363637; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/base-create/1f2468ab51-1680179645/thumbnail-base-desktop-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #363637; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #D8D3CD; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/avvr/4d2a7758a4-1672918357/thumbnail-avvr-v2-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #D8D3CD; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1497366216548-37526070297c?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #7E7E7E; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/graphichunters/0daec771af-1660128857/thumbnail-gh-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #7E7E7E; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #DCD0C2; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/future-goals/614e28a662-1653057688/thumbnail-futuregoals-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #DCD0C2; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #B1A994; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/atypikal/fd1951ffc9-1646837277/thumbnail-atypikal-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #B1A994; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner development interaction visible">
-                            <div class="overlay overlay-image lazy" style="background-color: var(--color-lightgray); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/one-nil/288460827e-1646837272/thumbnail-onenil-v3-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: var(--color-lightgray); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=810&h=810&fit=crop"></div>
                         </li>
                         <li class="mouse-pos-list-image-inner design development visible">
-                            <div class="overlay overlay-image lazy" style="background-color: #626D6E; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/andy-hardy/f152b03247-1646837253/thumbnail-andyhardy-810x810-crop-q72.jpg"></div>
+                            <div class="overlay overlay-image lazy" style="background-color: #626D6E; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=810&h=810&fit=crop"></div>
                         </li>
                     </div>
                 </div>
             </div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Ko'rish</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="work.filters.viewLabel">Ko'rish</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -114,37 +150,44 @@
                             <li class="btn btn-link">
                                 <a href="index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -192,31 +235,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -225,7 +282,7 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col once-in">
-            <h1><span>Keyingi bosqich </span><span>raqamli mahsulotlar</span></h1>
+            <h1><span data-i18n="work.title1">Keyingi bosqich </span><span data-i18n="work.title2">raqamli mahsulotlar</span></h1>
          </div>
       </div>
    </div>
@@ -239,7 +296,7 @@
                <div class="btn-click magnetic" data-strength="25" data-strength-text="15">
                   <div class="btn-fill"></div>
                   <span class="btn-text">
-                     <span class="btn-text-inner change">Hammasi</span>
+                     <span class="btn-text-inner change" data-i18n="work.filters.all">Hammasi</span>
                   </span>
                </div>
             </div>
@@ -247,7 +304,7 @@
                <div class="btn-click magnetic" data-strength="25" data-strength-text="15">
                   <div class="btn-fill"></div>
                   <span class="btn-text">
-                     <span class="btn-text-inner change">Frontend<div class="count-nr">7</div></span>
+                     <span class="btn-text-inner change" data-i18n="work.filters.frontend">Frontend<div class="count-nr">7</div></span>
                   </span>
                </div>
             </div>
@@ -255,7 +312,7 @@
                <div class="btn-click magnetic" data-strength="25" data-strength-text="15">
                   <div class="btn-fill"></div>
                   <span class="btn-text">
-                     <span class="btn-text-inner change">Backend<div class="count-nr">11</div></span>
+                     <span class="btn-text-inner change" data-i18n="work.filters.backend">Backend<div class="count-nr">11</div></span>
                   </span>
                </div>
             </div>
@@ -287,16 +344,16 @@
       <div class="container">
          <div class="grid-sub-title">
             <div class="flex-col">
-               <h5>Mijoz</h5>
+               <h5 data-i18n="work.grid.client">Mijoz</h5>
             </div>
             <div class="flex-col">
-               <h5>Joylashuv</h5>
+               <h5 data-i18n="work.grid.location">Joylashuv</h5>
             </div>
             <div class="flex-col">
-               <h5>Xizmatlar</h5>
+               <h5 data-i18n="work.grid.services">Xizmatlar</h5>
             </div>
             <div class="flex-col">
-               <h5>Yil</h5>
+               <h5 data-i18n="work.grid.year">Yil</h5>
             </div>
          </div>
          <ul class="work-items mouse-pos-list-image-wrap all-active">
@@ -304,16 +361,16 @@
                <div class="stripe animate"></div>
                <a href="work/ecommerce.html" class="row">
                   <div class="flex-col">
-                     <h4><span>E-Commerce Platform</span></h4>
+                     <h4><span data-i18n="work.projects.ecommerce.title">E-Commerce Platform</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>O'zbekiston</p>
+                     <p data-i18n="work.projects.ecommerce.location">O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Full-Stack Development</p>
+                     <p data-i18n="work.projects.ecommerce.services">Full-Stack Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2024</p>
+                     <p data-i18n="work.projects.ecommerce.year">2024</p>
                   </div>
                </a>
             </li>
@@ -321,16 +378,16 @@
                <div class="stripe animate"></div>
                <a href="work/crm.html" class="row">
                   <div class="flex-col">
-                     <h4><span>CRM Tizimi</span></h4>
+                     <h4><span data-i18n="work.projects.crm.title">CRM Tizimi</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>Toshkent, O'zbekiston</p>
+                     <p data-i18n="work.projects.crm.location">Toshkent, O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Backend & Frontend</p>
+                     <p data-i18n="work.projects.crm.services">Backend & Frontend</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2024</p>
+                     <p data-i18n="work.projects.crm.year">2024</p>
                   </div>
                </a>
             </li>
@@ -338,16 +395,16 @@
                <div class="stripe animate"></div>
                <a href="work/school.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Maktab Boshqaruv Paneli</span></h4>
+                     <h4><span data-i18n="work.projects.school.title">Maktab Boshqaruv Paneli</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>O'zbekiston</p>
+                     <p data-i18n="work.projects.school.location">O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Full-Stack Development</p>
+                     <p data-i18n="work.projects.school.services">Full-Stack Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2023</p>
+                     <p data-i18n="work.projects.school.year">2023</p>
                   </div>
                </a>
             </li>
@@ -355,16 +412,16 @@
                <div class="stripe animate"></div>
                <a href="work/tour.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Tur Agentligi Web Sayti</span></h4>
+                     <h4><span data-i18n="work.projects.tour.title">Tur Agentligi Web Sayti</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>Samarqand, O'zbekiston</p>
+                     <p data-i18n="work.projects.tour.location">Samarqand, O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Design & Development</p>
+                     <p data-i18n="work.projects.tour.services">Design & Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2023</p>
+                     <p data-i18n="work.projects.tour.year">2023</p>
                   </div>
                </a>
             </li>
@@ -372,16 +429,16 @@
                <div class="stripe animate"></div>
                <a href="work/mobile.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Mobile Ilova (React Native)</span></h4>
+                     <h4><span data-i18n="work.projects.mobile.title">Mobile Ilova (React Native)</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>O'zbekiston</p>
+                     <p data-i18n="work.projects.mobile.location">O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Mobile Development</p>
+                     <p data-i18n="work.projects.mobile.services">Mobile Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2024</p>
+                     <p data-i18n="work.projects.mobile.year">2024</p>
                   </div>
                </a>
             </li>
@@ -389,16 +446,16 @@
                <div class="stripe animate"></div>
                <a href="work/corporate.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Korporativ Web Sayt</span></h4>
+                     <h4><span data-i18n="work.projects.corporate.title">Korporativ Web Sayt</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>Rossiya</p>
+                     <p data-i18n="work.projects.corporate.location">Rossiya</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Frontend Development</p>
+                     <p data-i18n="work.projects.corporate.services">Frontend Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2023</p>
+                     <p data-i18n="work.projects.corporate.year">2023</p>
                   </div>
                </a>
             </li>
@@ -406,16 +463,16 @@
                <div class="stripe animate"></div>
                <a href="work/restaurant.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Restoran Boshqaruv Tizimi</span></h4>
+                     <h4><span data-i18n="work.projects.restaurant.title">Restoran Boshqaruv Tizimi</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>Toshkent</p>
+                     <p data-i18n="work.projects.restaurant.location">Toshkent</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Full-Stack Development</p>
+                     <p data-i18n="work.projects.restaurant.services">Full-Stack Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2022</p>
+                     <p data-i18n="work.projects.restaurant.year">2022</p>
                   </div>
                </a>
             </li>
@@ -423,16 +480,16 @@
                <div class="stripe animate"></div>
                <a href="work/portfolio.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Portfolio Web Sayti</span></h4>
+                     <h4><span data-i18n="work.projects.portfolio.title">Portfolio Web Sayti</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>O'zbekiston</p>
+                     <p data-i18n="work.projects.portfolio.location">O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Frontend Development</p>
+                     <p data-i18n="work.projects.portfolio.services">Frontend Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2022</p>
+                     <p data-i18n="work.projects.portfolio.year">2022</p>
                   </div>
                </a>
             </li>
@@ -440,16 +497,16 @@
                <div class="stripe animate"></div>
                <a href="work/api.html" class="row">
                   <div class="flex-col">
-                     <h4><span>RESTful API Xizmati</span></h4>
+                     <h4><span data-i18n="work.projects.api.title">RESTful API Xizmati</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>AQSH</p>
+                     <p data-i18n="work.projects.api.location">AQSH</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Backend Development</p>
+                     <p data-i18n="work.projects.api.services">Backend Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2021</p>
+                     <p data-i18n="work.projects.api.year">2021</p>
                   </div>
                </a>
             </li>
@@ -457,16 +514,16 @@
                <div class="stripe animate"></div>
                <a href="work/landing.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Landing Page</span></h4>
+                     <h4><span data-i18n="work.projects.landing.title">Landing Page</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>O'zbekiston</p>
+                     <p data-i18n="work.projects.landing.location">O'zbekiston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Frontend Development</p>
+                     <p data-i18n="work.projects.landing.services">Frontend Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2021</p>
+                     <p data-i18n="work.projects.landing.year">2021</p>
                   </div>
                </a>
             </li>
@@ -474,16 +531,16 @@
                <div class="stripe animate"></div>
                <a href="work/dashboard.html" class="row">
                   <div class="flex-col">
-                     <h4><span>Admin Dashboard</span></h4>
+                     <h4><span data-i18n="work.projects.dashboard.title">Admin Dashboard</span></h4>
                   </div>
                   <div class="flex-col animate">
-                     <p>Qozog'iston</p>
+                     <p data-i18n="work.projects.dashboard.location">Qozog'iston</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>Full-Stack Development</p>
+                     <p data-i18n="work.projects.dashboard.services">Full-Stack Development</p>
                   </div>
                   <div class="flex-col animate">
-                     <p>2020</p>
+                     <p data-i18n="work.projects.dashboard.year">2020</p>
                   </div>
                </a>
             </li>
@@ -501,18 +558,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #F1F1F1;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/twice/0ab7e43954-1710404752/thumbnail-twice.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>E-Commerce Platform</span></h4>
+                        <h4><span data-i18n="work.projects.ecommerce.title">E-Commerce Platform</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Full-Stack Development</p>
+                        <p data-i18n="work.projects.ecommerce.services">Full-Stack Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2024</p>
+                        <p data-i18n="work.projects.ecommerce.year">2024</p>
                      </div>
                   </a>
                </div>
@@ -523,18 +580,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #E0D9D1;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/the-damai/b511d32d21-1710452224/thumbnail-thedamai-v2.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>CRM Tizimi</span></h4>
+                        <h4><span data-i18n="work.projects.crm.title">CRM Tizimi</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Backend & Frontend</p>
+                        <p data-i18n="work.projects.crm.services">Backend & Frontend</p>
                      </div>
                      <div class="flex-col">
-                        <p>2024</p>
+                        <p data-i18n="work.projects.crm.year">2024</p>
                      </div>
                   </a>
                </div>
@@ -545,18 +602,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #48494A;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/fabric/ac07564a5f-1688453092/thumbnail-fabric-darkgray.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Maktab Boshqaruv Paneli</span></h4>
+                        <h4><span data-i18n="work.projects.school.title">Maktab Boshqaruv Paneli</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Full-Stack Development</p>
+                        <p data-i18n="work.projects.school.services">Full-Stack Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2023</p>
+                        <p data-i18n="work.projects.school.year">2023</p>
                      </div>
                   </a>
                </div>
@@ -567,18 +624,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #101010;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/aanstekelijk/441187fb44-1687423090/thumbnail-aanstekelijk.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Tur Agentligi Web Sayti</span></h4>
+                        <h4><span data-i18n="work.projects.tour.title">Tur Agentligi Web Sayti</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Design & Development</p>
+                        <p data-i18n="work.projects.tour.services">Design & Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2023</p>
+                        <p data-i18n="work.projects.tour.year">2023</p>
                      </div>
                   </a>
                </div>
@@ -589,18 +646,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #363637;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/base-create/1f2468ab51-1680179645/thumbnail-base-desktop.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Mobile Ilova</span></h4>
+                        <h4><span data-i18n="work.projects.mobile.title">Mobile Ilova</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Mobile Development</p>
+                        <p data-i18n="work.projects.mobile.services">Mobile Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2024</p>
+                        <p data-i18n="work.projects.mobile.year">2024</p>
                      </div>
                   </a>
                </div>
@@ -611,18 +668,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #D8D3CD;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/avvr/4d2a7758a4-1672918357/thumbnail-avvr-v2.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Korporativ Web Sayt</span></h4>
+                        <h4><span data-i18n="work.projects.corporate.title">Korporativ Web Sayt</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Frontend Development</p>
+                        <p data-i18n="work.projects.corporate.services">Frontend Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2023</p>
+                        <p data-i18n="work.projects.corporate.year">2023</p>
                      </div>
                   </a>
                </div>
@@ -633,18 +690,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #7E7E7E;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/graphichunters/0daec771af-1660128857/thumbnail-gh.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Restoran Boshqaruv</span></h4>
+                        <h4><span data-i18n="work.projects.restaurant.title">Restoran Boshqaruv</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Full-Stack Development</p>
+                        <p data-i18n="work.projects.restaurant.services">Full-Stack Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2022</p>
+                        <p data-i18n="work.projects.restaurant.year">2022</p>
                      </div>
                   </a>
                </div>
@@ -655,18 +712,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #DCD0C2;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/future-goals/614e28a662-1653057688/thumbnail-futuregoals.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Portfolio Web Sayti</span></h4>
+                        <h4><span data-i18n="work.projects.portfolio.title">Portfolio Web Sayti</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Frontend Development</p>
+                        <p data-i18n="work.projects.portfolio.services">Frontend Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2022</p>
+                        <p data-i18n="work.projects.portfolio.year">2022</p>
                      </div>
                   </a>
                </div>
@@ -677,18 +734,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #B1A994;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/atypikal/fd1951ffc9-1646837277/thumbnail-atypikal.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>RESTful API Xizmati</span></h4>
+                        <h4><span data-i18n="work.projects.api.title">RESTful API Xizmati</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Backend Development</p>
+                        <p data-i18n="work.projects.api.services">Backend Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2021</p>
+                        <p data-i18n="work.projects.api.year">2021</p>
                      </div>
                   </a>
                </div>
@@ -699,18 +756,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: var(--color-lightgray);"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/one-nil/288460827e-1646837272/thumbnail-onenil-v3.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Landing Page</span></h4>
+                        <h4><span data-i18n="work.projects.landing.title">Landing Page</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Frontend Development</p>
+                        <p data-i18n="work.projects.landing.services">Frontend Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2021</p>
+                        <p data-i18n="work.projects.landing.year">2021</p>
                      </div>
                   </a>
                </div>
@@ -721,18 +778,18 @@
                      <div class="flex-col">
                         <div class="tile-image">
                            <div class="overlay overlay-color" style="background-color: #626D6E;"></div>
-                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="media/pages/work/andy-hardy/f152b03247-1646837253/thumbnail-andyhardy.jpg"></div>
+                           <div class="overlay overlay-image lazy" style="background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=800&fit=crop"></div>
                         </div>
                      </div>
                      <div class="flex-col">
-                        <h4><span>Admin Dashboard</span></h4>
+                        <h4><span data-i18n="work.projects.dashboard.title">Admin Dashboard</span></h4>
                         <div class="stripe"></div>
                      </div>
                      <div class="flex-col">
-                        <p>Full-Stack Development</p>
+                        <p data-i18n="work.projects.dashboard.services">Full-Stack Development</p>
                      </div>
                      <div class="flex-col">
-                        <p>2020</p>
+                        <p data-i18n="work.projects.dashboard.year">2020</p>
                      </div>
                   </a>
                </div>
@@ -765,7 +822,7 @@
         </g>
     </g>
 </svg></div>
-                    <h2><span><div class="profile-picture"></div> Keling birga  </span><span>ishlaymiz</span></h2>
+                    <h2><span><div class="profile-picture"></div><span data-i18n="footer.workTogether">Keling birga ishlaymiz</span></span></h2>
                 </div>
             </div>
             <div class="row">
@@ -776,7 +833,7 @@
                             <a href="contact.html" class="btn-click magnetic " data-strength="100" data-strength-text="50">
                                 <div class="btn-fill"></div>
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bog'lanish</span>
+                                    <span class="btn-text-inner" data-i18n="footer.contactBtn">Bog'lanish</span>
                                 </span>
                             </a>
                         </div>
@@ -808,17 +865,17 @@
             <div class="row bottom-footer">
                 <div class="flex-col">
                     <div class="credits">
-                        <h5>Versiya</h5>
-                        <p>2025 © Nashr</p>
+                        <h5 data-i18n="footer.version">Versiya</h5>
+                        <p data-i18n="footer.versionText">2025 © Nashr</p>
                     </div>
                     <div class="time">
-                        <h5>Mahalliy vaqt</h5>
+                        <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                         <p><span id="timeSpan">09:41 PM UZT</span></p>
                     </div>
                 </div>
                 <div class="flex-col">
                     <div class="socials">
-                        <h5>Ijtimoiy tarmoqlar</h5>
+                        <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                         <ul>
                             <li class="btn btn-link btn-link-external">
                                 <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -867,6 +924,7 @@
         <script src="../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="assets/js/locomotive-scroll.min.js"></script>
+        <script src="assets/js/i18n.js"></script>
         <script defer src="assets/js/index-new.js"></script>
     </body>
 
