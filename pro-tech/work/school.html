@@ -22,6 +22,43 @@
       <link href="../assets/css/components.css" rel="stylesheet">
       <link href="../assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        /* Mobile menu language switcher */
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        /* Animation for language switch */
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,15 +74,15 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
                     <h2>E-Commerce Platform<div class="dot"></div></h2>
                     <h2>CRM Tizimi<div class="dot"></div></h2>
                     <h2>Mobile Ilova<div class="dot"></div></h2>
                     <h2>Web Development<div class="dot"></div></h2>
                     <h2 class="active">Maktab Boshqaruv Tizimi<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -55,14 +92,13 @@
         <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single" >
             <div class="mouse-pos-list-image no-select"></div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Keyingi loyiha</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="projectPages.school.nextProject">Keyingi loyiha</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -81,37 +117,44 @@
                             <li class="btn btn-link">
                                 <a href="../index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="../work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -160,31 +203,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="../work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -193,7 +250,7 @@
    <div class="container medium once-in">
       <div class="row">
          <div class="flex-col">
-            <h1>Maktab Boshqaruv Tizimi</h1>
+            <h1 data-i18n="projectPages.school.title">Maktab Boshqaruv Tizimi</h1>
          </div>
       </div>
    </div>
@@ -203,33 +260,35 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h5>Rol / Xizmatlar</h5>
+            <h5 data-i18n="projectPages.school.role">Rol / Xizmatlar</h5>
             <div class="stripe"></div>
-            <li><p>Full-Stack Development</p></li>
-            <li><p>Ta'lim Boshqaruv Tizimi</p></li>
+            <li><p data-i18n="projectPages.school.services.fullstack">Full-Stack Development</p></li>
+            <li><p data-i18n="projectPages.school.services.system">Ta'lim Boshqaruv Tizimi</p></li>
          </div>
          <div class="flex-col">
-            <h5>Imkoniyatlar</h5>
+            <h5 data-i18n="projectPages.school.features">Imkoniyatlar</h5>
             <div class="stripe"></div>
-            <li><p>O'quvchilar boshqaruvi</p></li>
-            <li><p>Davomat va baholar</p></li>
+            <li><p data-i18n="projectPages.school.featureList.students">O'quvchilar boshqaruvi</p></li>
+            <li><p data-i18n="projectPages.school.featureList.attendance">Davomat va baholar</p></li>
          </div>
          <div class="flex-col">
-            <h5>Joylashuv & Yil</h5>
+            <h5 data-i18n="projectPages.school.locationYear">Joylashuv & Yil</h5>
             <div class="stripe"></div>
-            <li><p>O'zbekiston, Toshkent ©</p></li>
-            <li><p>2024</p></li>
+            <li><p data-i18n="projectPages.school.location">O'zbekiston, Toshkent ©</p></li>
+            <li><p data-i18n="projectPages.school.year">2024</p></li>
          </div>
       </div>
    </div>
 </section>
 
+<!-- Hero Image - Classroom/Education -->
 <section class="section case-intro-image once-in  "  data-scroll-section>
    <div class="container">
       <div class="row">
          <div class="flex-col">
             <div class="single-image">
-               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=2400&h=1600&fit=crop&q=80" />
+               <!-- Ta'lim muhiti - sinf xonasi yoki o'quvchilar -->
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=2400&h=1600&fit=crop&q=80" alt="School Classroom Environment" />
             </div>
          </div>
       </div>
@@ -237,6 +296,7 @@
 </section>
 </section>
 
+<!-- Laptop Device - Students Working Video -->
 <section class="section single-block block-device block_0 block-padding-bottom "  data-scroll-section>
    <div class="container">
       <div class="row device-mbp15">
@@ -244,6 +304,7 @@
             <div class="device">
                <div class="single-image">
                   <div class="overlay overlay-image playpauze">
+                     <!-- O'quvchilar sinfda laptop bilan ishlayapti - online ta'lim -->
                      <video class="overlay" src="https://cdn.coverr.co/videos/coverr-students-working-on-laptops-in-classroom-8100/1080p.mp4" loop muted playsinline></video>
                   </div>
                </div>
@@ -256,17 +317,20 @@
    </div>
 </section>
 
+<!-- Full Width Image - Modern School Environment -->
 <section class="section single-block block-fullwidth block_1" data-scroll-section>
    <div class="row">
       <div class="flex-col">
          <div class="single-image">
-            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=6000&h=4500&fit=crop&q=80" width="6000" height="4500" />   
+            <!-- Zamonaviy maktab muhiti - kutubxona yoki o'quv xonasi -->
+            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=6000&h=4500&fit=crop&q=80" width="6000" height="4500" alt="Modern School Library" />   
             <div class="overlay dark-overlay" style="opacity: 0;"></div>             
          </div>
       </div>
    </div>
 </section>
 
+<!-- Laptop Device - Education Platform Dashboard -->
 <section class="section single-block block-device block_2 block-padding-bottom "  data-scroll-section>
    <div class="container">
       <div class="row device-mbp15">
@@ -274,6 +338,7 @@
             <div class="device">
                <div class="single-image">
                   <div class="overlay overlay-image playpauze">
+                     <!-- Online ta'lim platformasi dashboard - darslar va baholar -->
                      <video class="overlay" src="https://cdn.coverr.co/videos/coverr-online-education-platform-dashboard-9586/1080p.mp4" loop muted playsinline></video>
                   </div>
                </div>
@@ -286,17 +351,20 @@
    </div>
 </section>
 
+<!-- Full Width Image - Students Studying -->
 <section class="section single-block block-fullwidth block_3" data-scroll-section>
    <div class="row">
       <div class="flex-col">
          <div class="single-image">
-            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=6000&h=4500&fit=crop&q=80" width="6000" height="4500" />   
+            <!-- O'quvchilar dars tayyorlayapti - guruh ishlari -->
+            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=6000&h=4500&fit=crop&q=80" width="6000" height="4500" alt="Students Group Study" />   
             <div class="overlay dark-overlay" style="opacity: 0;"></div>             
          </div>
       </div>
    </div>
 </section>
 
+<!-- Laptop Device - Student Management System -->
 <section class="section single-block block-device block_4 block-padding-bottom "  data-scroll-section>
    <div class="container">
       <div class="row device-mbp15">
@@ -304,6 +372,7 @@
             <div class="device">
                <div class="single-image">
                   <div class="overlay overlay-image playpauze">
+                     <!-- O'quvchilar boshqaruv tizimi - davomat, baholar, profil -->
                      <video class="overlay" src="https://cdn.coverr.co/videos/coverr-student-management-system-interface-9585/1080p.mp4" loop muted playsinline></video>
                   </div>
                </div>
@@ -327,11 +396,12 @@
       <div class="container medium">
          <a href="ecommerce.html" class="row next-case-btn">
             <div class="flex-col">
-               <p>Keyingi loyiha</p>
-               <h2>E-Commerce Platform</h2>
+               <p data-i18n="projectPages.school.nextProject">Keyingi loyiha</p>
+               <h2 data-i18n="projectPages.school.nextProjectName">E-Commerce Platform</h2>
             </div>
             <div class="tile-image-wrap">
                <div class="tile-image">
+                  <!-- Keyingi loyiha preview - E-commerce -->
                   <div class="overlay overlay-image lazy" data-scroll data-scroll-speed="2.5" data-scroll-position="bottom" style="background-color:#ddd; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80"></div>
                </div>
             </div>
@@ -347,7 +417,7 @@
                   <a href="../work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                      <div class="btn-fill"></div>
                      <span class="btn-text">
-                        <span class="btn-text-inner change">Barcha ishlar<div class="count-nr">11</div></span>
+                        <span class="btn-text-inner change"><span data-i18n="projectPages.school.allWorks">Barcha ishlar</span><div class="count-nr" data-i18n="projectPages.school.worksCount">11</div></span>
                      </span>
                   </a>
                </div>
@@ -358,17 +428,17 @@
          <div class="row bottom-footer">
             <div class="flex-col">
                <div class="credits">
-                  <h5>Versiya</h5>
-                  <p>2025 © Nashr</p>
+                  <h5 data-i18n="footer.version">Versiya</h5>
+                  <p data-i18n="footer.versionText">2025 © Nashr</p>
                </div>
                <div class="time">
-                  <h5>Mahalliy vaqt</h5>
+                  <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                   <p><span id="timeSpan">09:41 PM UZT</span></p>
                </div>
             </div>
             <div class="flex-col">
                <div class="socials">
-                  <h5>Ijtimoiy tarmoqlar</h5>
+                  <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                   <ul>
                      <li class="btn btn-link btn-link-external">
                         <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -423,6 +493,7 @@
         <script src="../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="../assets/js/locomotive-scroll.min.js"></script>
+        <script src="../assets/js/i18n.js"></script>
         <script defer src="../assets/js/index-new.js"></script>
     </body>
 

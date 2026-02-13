@@ -22,6 +22,43 @@
       <link href="../assets/css/components.css" rel="stylesheet">
       <link href="../assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        /* Mobile menu language switcher */
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        /* Animation for language switch */
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,12 +74,12 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
                     <h2>E-Commerce Platform<div class="dot"></div></h2>
                     <h2 class="active">CRM Tizimi<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -52,14 +89,13 @@
         <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single" >
             <div class="mouse-pos-list-image no-select"></div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Keyingi loyiha</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="projectPages.crm.nextProject">Keyingi loyiha</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -78,37 +114,44 @@
                             <li class="btn btn-link">
                                 <a href="../index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="../work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -157,31 +200,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="../work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -190,7 +247,7 @@
    <div class="container medium once-in">
       <div class="row">
          <div class="flex-col">
-            <h1>CRM Boshqaruv Tizimi</h1>
+            <h1 data-i18n="projectPages.crm.title">CRM Boshqaruv Tizimi</h1>
          </div>
       </div>
    </div>
@@ -200,36 +257,38 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h5>Rol / Xizmatlar</h5>
+            <h5 data-i18n="projectPages.crm.role">Rol / Xizmatlar</h5>
             <div class="stripe"></div>
-            <li><p>Full-Stack Development</p></li>
-            <li><p>Frontend: Vue.js, Nuxt.js</p></li>
-            <li><p>Backend: Python, FastAPI</p></li>
+            <li><p data-i18n="projectPages.crm.services.fullstack">Full-Stack Development</p></li>
+            <li><p data-i18n="projectPages.crm.services.frontend">Frontend: Vue.js, Nuxt.js</p></li>
+            <li><p data-i18n="projectPages.crm.services.backend">Backend: Python, FastAPI</p></li>
          </div>
          <div class="flex-col">
-            <h5>Texnologiyalar</h5>
+            <h5 data-i18n="projectPages.crm.tech">Texnologiyalar</h5>
             <div class="stripe"></div>
-            <li><p>Nuxt.js 3</p></li>
-            <li><p>Python FastAPI</p></li>
-            <li><p>PostgreSQL</p></li>
-            <li><p>Redis Cache</p></li>
+            <li><p data-i18n="projectPages.crm.technologies.nuxt">Nuxt.js 3</p></li>
+            <li><p data-i18n="projectPages.crm.technologies.fastapi">Python FastAPI</p></li>
+            <li><p data-i18n="projectPages.crm.technologies.postgres">PostgreSQL</p></li>
+            <li><p data-i18n="projectPages.crm.technologies.redis">Redis Cache</p></li>
          </div>
          <div class="flex-col">
-            <h5>Joylashuv & Yil</h5>
+            <h5 data-i18n="projectPages.crm.locationYear">Joylashuv & Yil</h5>
             <div class="stripe"></div>
-            <li><p>O'zbekiston, Toshkent ©</p></li>
-            <li><p>2024</p></li>
+            <li><p data-i18n="projectPages.crm.location">O'zbekiston, Toshkent ©</p></li>
+            <li><p data-i18n="projectPages.crm.year">2024</p></li>
          </div>
       </div>
    </div>
 </section>
 
+<!-- Hero Image - CRM Dashboard Analytics -->
 <section class="section case-intro-image once-in block-padding-bottom "  data-scroll-section>
    <div class="container">
       <div class="row">
          <div class="flex-col">
             <div class="single-image">
-               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2400&h=1600&fit=crop&q=80" />
+               <!-- CRM Dashboard - Analytics va statistika ekrani -->
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2400&h=1600&fit=crop&q=80" alt="CRM Dashboard Analytics" />
             </div>
          </div>
       </div>
@@ -237,6 +296,7 @@
 </section>
 </section>
 
+<!-- Laptop Device - CRM Dashboard Video -->
 <section class="section single-block block-device block_0 block-padding-bottom " style="background-color: #E0D9D1;" data-scroll-section>
    <div class="container">
       <div class="row device-mbp16lower">
@@ -244,6 +304,7 @@
             <div class="device">
                <div class="single-image">
                   <div class="overlay overlay-image playpauze">
+                     <!-- CRM Business Dashboard - Analytics va graphs ko'rsatish -->
                      <video class="overlay" src="https://cdn.coverr.co/videos/coverr-business-dashboard-analytics-8099/1080p.mp4" loop muted playsinline></video>
                   </div>
                </div>
@@ -256,6 +317,7 @@
    </div>
 </section>
 
+<!-- Desktop Video - Customer Service Work -->
 <section class="section single-block block-device block_1 block-padding-bottom " style="background-color: #1a1a2e;" data-scroll-section>
    <div class="container">
       <div class="row device-nodevice">
@@ -263,6 +325,7 @@
             <div class="device">
                <div class="single-image">
                   <div class="overlay overlay-image playpauze">
+                     <!-- CRM ishchi jarayoni - Customer service representative -->
                      <video class="overlay" src="https://cdn.coverr.co/videos/coverr-customer-service-representative-working-on-computer-9424/1080p.mp4" loop muted playsinline></video>
                   </div>
                </div>
@@ -272,15 +335,17 @@
    </div>
 </section>
 
+<!-- Full Width Image - CRM Dashboard with Text Overlay -->
 <section class="section single-block block-fullwidth block_2" data-scroll-section>
    <div class="row">
       <div class="flex-col">
          <div class="single-image">
-            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2400&h=1600&fit=crop&q=80" width="2000" height="1333" />   
+            <!-- Analytics Dashboard - To'liq kenglikdagi CRM interface rasmi -->
+            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2400&h=1600&fit=crop&q=80" width="2000" height="1333" alt="CRM Analytics Dashboard" />   
             <div class="overlay dark-overlay" style="opacity: 0.15;"></div>
             <div class="overlay text-overlay theme-dark">
                <div class="container">
-                  <h2>Mijozlar bilan munosabatlarni boshqarish tizimi</h2>
+                  <h2 data-i18n="projectPages.crm.overlayText">Mijozlar bilan munosabatlarni boshqarish tizimi</h2>
                </div>
             </div>
          </div>
@@ -288,29 +353,36 @@
    </div>
 </section>
 
+<!-- Mobile Mockups - CRM Mobile App Screens -->
 <section class="section single-block block-mobile-devices block_3" data-scroll-section style="background-color: #E0D9D1;">
    <div class="container no-padding block-padding-sides amount-3">
       <div class="row device-iphone13nonotch">
+         <!-- Mobile Screen 1 - Mobile app interface -->
          <div class="flex-col block-padding-bottom" >
             <div class="device" data-scroll data-scroll-target=".block_3" data-scroll-speed="1">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <!-- Mobile CRM - Customer list yoki dashboard -->
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="CRM Mobile Dashboard" /> 
                </div>  
                <div class="overlay-device-image"><div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div></div>
             </div>
          </div>
+         <!-- Mobile Screen 2 - Analytics screen -->
          <div class="flex-col block-padding-bottom" >
             <div class="device">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <!-- Mobile CRM - Analytics va statistics -->
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="CRM Mobile Analytics" /> 
                </div>  
                <div class="overlay-device-image"><div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div></div>
             </div>
          </div>
+         <!-- Mobile Screen 3 - Chart/Graph screen -->
          <div class="flex-col block-padding-bottom" >
             <div class="device" data-scroll data-scroll-target=".block_3" data-scroll-speed="-1">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <!-- Mobile CRM - Charts va graphs ko'rinishi -->
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="CRM Mobile Charts" /> 
                </div>  
                <div class="overlay-device-image"><div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div></div>
             </div>
@@ -319,13 +391,15 @@
    </div>
 </section>
 
+<!-- Desktop Screenshot - Large CRM Interface -->
 <section class="section single-block block-screenshot block_4  "  data-scroll-section>
    <div class="container">
       <div class="row ">
          <div class="flex-col">
             <div class="device">
                <div class="single-image">
-                  <img class="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2880&h=1800&fit=crop&q=80" width="2880" height="1800"/>   
+                  <!-- To'liq CRM dashboard screenshot - barcha funksiyalar -->
+                  <img class="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2880&h=1800&fit=crop&q=80" width="2880" height="1800" alt="Full CRM Dashboard Screenshot"/>   
                </div>
             </div>
          </div>
@@ -333,13 +407,17 @@
    </div>
 </section>
 
+<!-- Desktop Video Screenshot - Data Analysis -->
 <section class="section single-block block-screenshot block_5 block-padding-bottom "  data-scroll-section>
    <div class="container">
       <div class="row ">
          <div class="flex-col">
             <div class="device">
                <div class="single-image">
-                  <div class="playpauze"><video class="" src="https://cdn.coverr.co/videos/coverr-data-analysis-on-a-computer-screen-5858/1080p.mp4" loop muted playsinline></video></div>
+                  <div class="playpauze">
+                     <!-- Data analysis - real-time ma'lumotlar tahlili -->
+                     <video class="" src="https://cdn.coverr.co/videos/coverr-data-analysis-on-a-computer-screen-5858/1080p.mp4" loop muted playsinline></video>
+                  </div>
                </div>
             </div>
          </div>
@@ -358,11 +436,12 @@
       <div class="container medium">
          <a href="mobile-app.html" class="row next-case-btn">
             <div class="flex-col">
-               <p>Keyingi loyiha</p>
-               <h2>Mobile Ilova</h2>
+               <p data-i18n="projectPages.crm.nextProject">Keyingi loyiha</p>
+               <h2 data-i18n="projectPages.crm.nextProjectName">Mobile Ilova</h2>
             </div>
             <div class="tile-image-wrap">
                <div class="tile-image">
+                  <!-- Keyingi loyiha preview - Mobile App -->
                   <div class="overlay overlay-image lazy" data-scroll data-scroll-speed="2.5" data-scroll-position="bottom" style="background-color:#F5F5F5; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80"></div>
                </div>
             </div>
@@ -378,7 +457,7 @@
                   <a href="../work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                      <div class="btn-fill"></div>
                      <span class="btn-text">
-                        <span class="btn-text-inner change">Barcha ishlar<div class="count-nr">11</div></span>
+                        <span class="btn-text-inner change"><span data-i18n="projectPages.crm.allWorks">Barcha ishlar</span><div class="count-nr" data-i18n="projectPages.crm.worksCount">11</div></span>
                      </span>
                   </a>
                </div>
@@ -389,17 +468,17 @@
          <div class="row bottom-footer">
             <div class="flex-col">
                <div class="credits">
-                  <h5>Versiya</h5>
-                  <p>2025 © Nashr</p>
+                  <h5 data-i18n="footer.version">Versiya</h5>
+                  <p data-i18n="footer.versionText">2025 © Nashr</p>
                </div>
                <div class="time">
-                  <h5>Mahalliy vaqt</h5>
+                  <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                   <p><span id="timeSpan">09:41 PM UZT</span></p>
                </div>
             </div>
             <div class="flex-col">
                <div class="socials">
-                  <h5>Ijtimoiy tarmoqlar</h5>
+                  <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                   <ul>
                      <li class="btn btn-link btn-link-external">
                         <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -466,6 +545,7 @@
         <script src="../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="../assets/js/locomotive-scroll.min.js"></script>
+        <script src="../assets/js/i18n.js"></script>
         <script defer src="../assets/js/index-new.js"></script>
     </body>
 

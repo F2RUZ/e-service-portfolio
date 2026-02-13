@@ -5,7 +5,8 @@
       "services": "Xizmatlar",
       "about": "Biz haqimizda",
       "contact": "Aloqa",
-      "menu": "Menyu"
+      "menu": "Menyu",
+      "navigation": "Navigatsiya"
     },
     "header": {
       "location": "O'zbekiston, Toshkent shahrida",
@@ -196,6 +197,216 @@
         "nextProjectName": "E-Commerce Platform",
         "allWorks": "Barcha ishlar",
         "worksCount": "11"
+      },
+      "crm": {
+        "title": "CRM Boshqaruv Tizimi",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "fullstack": "Full-Stack Development",
+          "frontend": "Frontend: Vue.js, Nuxt.js",
+          "backend": "Backend: Python, FastAPI"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "nuxt": "Nuxt.js 3",
+          "fastapi": "Python FastAPI",
+          "postgres": "PostgreSQL",
+          "redis": "Redis Cache"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "overlayText": "Mijozlar bilan munosabatlarni boshqarish tizimi",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "Mobile Ilova",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "fullstack": "Full-Stack Development",
+          "frontend": "Frontend: Next.js, React",
+          "backend": "Backend: NestJS, PostgreSQL"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "nextjs": "Next.js 14",
+          "typescript": "TypeScript",
+          "tailwind": "Tailwind CSS",
+          "nestjs": "NestJS"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "CRM Tizimi",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "school": {
+        "title": "Maktab Boshqaruv Tizimi",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "fullstack": "Full-Stack Development",
+          "system": "Ta'lim Boshqaruv Tizimi"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "students": "O'quvchilar boshqaruvi",
+          "attendance": "Davomat va baholar"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "tour": {
+        "title": "Sayohat Agentligi",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "webDesign": "Web Dizayn va Dasturlash",
+          "tourManagement": "Tur paketlari boshqaruvi"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "booking": "Online bron qilish",
+          "payment": "To'lov integratsiyasi"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "corporate": {
+        "title": "Korporativ Web Sayt",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "design": "Dizayn va Dasturlash",
+          "branding": "Brend Identifikatsiyasi"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "vue": "Vue.js 3",
+          "gsap": "GSAP Animatsiyalar"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2023",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "Restoran Boshqaruv Tizimi",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "restaurant": {
+        "title": "Restoran Boshqaruv Tizimi",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "design": "Web Dizayni",
+          "management": "Menyu Boshqaruvi"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "booking": "Online bron qilish",
+          "menu": "Raqamli menyu"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2022",
+        "overlayText": "Mazali taomlar, ajoyib tajriba",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "Portfolio Web Sayti",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "portfolio": {
+        "title": "Portfolio Web Sayti",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "design": "Portfolio Dizayni",
+          "branding": "Shaxsiy Brending"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "showcase": "Loyihalar namoyishi",
+          "gallery": "Interactive galereya"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2022",
+        "overlayText": "Ijodiy ishlaringizni ko'rsating",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "landing": {
+        "title": "Landing Page",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "design": "Landing Sahifa Dizayni",
+          "conversion": "Konversiya Optimizatsiyasi"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "responsive": "Responsive dizayn",
+          "seo": "SEO optimizatsiya"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2021",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "mobile": {
+        "title": "Mobile Ilova",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "development": "Mobile Development",
+          "reactnative": "React Native & Expo"
+        },
+        "tech": "Texnologiyalar",
+        "technologies": {
+          "reactnative": "React Native",
+          "expo": "Expo SDK",
+          "typescript": "TypeScript"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2024",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "Web Development",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
+      },
+      "dashboard": {
+        "title": "Admin Dashboard",
+        "role": "Rol / Xizmatlar",
+        "services": {
+          "design": "Dashboard Dizayni",
+          "visualization": "Ma'lumotlar vizualizatsiyasi"
+        },
+        "features": "Imkoniyatlar",
+        "featureList": {
+          "statistics": "Real-time statistika",
+          "management": "Foydalanuvchilar boshqaruvi"
+        },
+        "locationYear": "Joylashuv & Yil",
+        "location": "O'zbekiston, Toshkent ©",
+        "year": "2020",
+        "nextProject": "Keyingi loyiha",
+        "nextProjectName": "E-Commerce Platform",
+        "allWorks": "Barcha ishlar",
+        "worksCount": "11"
       }
     }
   },
@@ -205,7 +416,8 @@
       "services": "Услуги",
       "about": "О нас",
       "contact": "Контакты",
-      "menu": "Меню"
+      "menu": "Меню",
+      "navigation": "Навигация"
     },
     "header": {
       "location": "Узбекистан, город Ташкент",
@@ -377,7 +589,6 @@
         "allWorks": "Все работы",
         "worksCount": "11"
       },
-
       "webDev": {
         "title": "Web Разработка",
         "role": "Роль / Услуги",
@@ -393,6 +604,216 @@
         "locationYear": "Местоположение & Год",
         "location": "Узбекистан, Ташкент ©",
         "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "crm": {
+        "title": "CRM Система Управления",
+        "role": "Роль / Услуги",
+        "services": {
+          "fullstack": "Full-Stack Разработка",
+          "frontend": "Frontend: Vue.js, Nuxt.js",
+          "backend": "Backend: Python, FastAPI"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "nuxt": "Nuxt.js 3",
+          "fastapi": "Python FastAPI",
+          "postgres": "PostgreSQL",
+          "redis": "Redis Cache"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "overlayText": "Система управления взаимоотношениями с клиентами",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "Мобильное Приложение",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "ecommerce": {
+        "title": "E-Commerce Платформа",
+        "role": "Роль / Услуги",
+        "services": {
+          "fullstack": "Full-Stack Разработка",
+          "frontend": "Frontend: Next.js, React",
+          "backend": "Backend: NestJS, PostgreSQL"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "nextjs": "Next.js 14",
+          "typescript": "TypeScript",
+          "tailwind": "Tailwind CSS",
+          "nestjs": "NestJS"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "CRM Система",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "school": {
+        "title": "Система Управления Школой",
+        "role": "Роль / Услуги",
+        "services": {
+          "fullstack": "Full-Stack Разработка",
+          "system": "Система Управления Образованием"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "students": "Управление учениками",
+          "attendance": "Посещаемость и оценки"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "tour": {
+        "title": "Туристическое Агентство",
+        "role": "Роль / Услуги",
+        "services": {
+          "webDesign": "Веб Дизайн и Разработка",
+          "tourManagement": "Управление турпакетами"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "booking": "Онлайн бронирование",
+          "payment": "Интеграция оплаты"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "corporate": {
+        "title": "Корпоративный Веб-Сайт",
+        "role": "Роль / Услуги",
+        "services": {
+          "design": "Дизайн и Разработка",
+          "branding": "Брендовая Идентификация"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "vue": "Vue.js 3",
+          "gsap": "GSAP Анимации"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2023",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "Система Управления Рестораном",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "restaurant": {
+        "title": "Система Управления Рестораном",
+        "role": "Роль / Услуги",
+        "services": {
+          "design": "Веб Дизайн",
+          "management": "Управление Меню"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "booking": "Онлайн бронирование",
+          "menu": "Цифровое меню"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2022",
+        "overlayText": "Вкусные блюда, отличный опыт",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "Портфолио Веб-Сайт",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "portfolio": {
+        "title": "Портфолио Веб-Сайт",
+        "role": "Роль / Услуги",
+        "services": {
+          "design": "Портфолио Дизайн",
+          "branding": "Личный Брендинг"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "showcase": "Демонстрация проектов",
+          "gallery": "Интерактивная галерея"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2022",
+        "overlayText": "Покажите свои творческие работы",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "landing": {
+        "title": "Посадочная Страница",
+        "role": "Роль / Услуги",
+        "services": {
+          "design": "Дизайн Посадочной Страницы",
+          "conversion": "Оптимизация Конверсии"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "responsive": "Адаптивный дизайн",
+          "seo": "SEO оптимизация"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2021",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "E-Commerce Платформа",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "mobile": {
+        "title": "Мобильное Приложение",
+        "role": "Роль / Услуги",
+        "services": {
+          "development": "Мобильная Разработка",
+          "reactnative": "React Native & Expo"
+        },
+        "tech": "Технологии",
+        "technologies": {
+          "reactnative": "React Native",
+          "expo": "Expo SDK",
+          "typescript": "TypeScript"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2024",
+        "nextProject": "Следующий проект",
+        "nextProjectName": "Web Разработка",
+        "allWorks": "Все работы",
+        "worksCount": "11"
+      },
+      "dashboard": {
+        "title": "Админ Панель",
+        "role": "Роль / Услуги",
+        "services": {
+          "design": "Дизайн Панели Управления",
+          "visualization": "Визуализация Данных"
+        },
+        "features": "Возможности",
+        "featureList": {
+          "statistics": "Статистика в реальном времени",
+          "management": "Управление пользователями"
+        },
+        "locationYear": "Местоположение & Год",
+        "location": "Узбекистан, Ташкент ©",
+        "year": "2020",
         "nextProject": "Следующий проект",
         "nextProjectName": "E-Commerce Платформа",
         "allWorks": "Все работы",

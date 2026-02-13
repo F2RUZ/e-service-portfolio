@@ -4,9 +4,9 @@
 <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-      <title>Restoran Web Sahifasi - Euphoria Service</title>
+      <title>Restoran Boshqaruv Tizimi - Euphoria Service</title>
       <meta name="description" content="Brendlarni raqamli dunyoda rivojlantirishga yordam beramiz. O'zbekiston, Toshkent shahrida joylashgan. Maxsus raqamli dizaynlar va noldan interaktiv veb-saytlar yaratamiz. © Euphoria Service"/>
-      <meta property="og:title" content="Restoran Web Sahifasi - Euphoria Service"/>
+      <meta property="og:title" content="Restoran Boshqaruv Tizimi - Euphoria Service"/>
       <meta property="og:description" content="Brendlarni raqamli dunyoda rivojlantirishga yordam beramiz. O'zbekiston, Toshkent shahrida joylashgan. Maxsus raqamli dizaynlar va noldan interaktiv veb-saytlar yaratamiz. © Euphoria Service"/>
       <meta property="og:site_name" content="Euphoria Service"/>
       <meta property="og:locale" content="uz"/>
@@ -21,6 +21,45 @@
       <link href="../assets/css/styleguide.css" rel="stylesheet">
       <link href="../assets/css/components.css" rel="stylesheet">
       <link href="../assets/css/style-new.css" rel="stylesheet">
+      
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+
+        .block_4 .container {
+          padding: 0;
+        }
+      </style>
       
    </head>
 
@@ -37,11 +76,11 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
-                    <h2 class="active">Restoran Web Sahifasi<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
+                    <h2 class="active">Restoran Boshqaruv Tizimi<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -51,14 +90,13 @@
         <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single" >
             <div class="mouse-pos-list-image no-select"></div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Keyingi loyiha</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="projectPages.restaurant.nextProject">Keyingi loyiha</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -71,43 +109,50 @@
                 </div>
                 <div class="fixed-nav-inner">
                     <div class="row nav-row">
-                        <h5>Navigatsiya</h5>
+                        <h5 data-i18n="nav.navigation">Navigatsiya</h5>
                         <div class="stripe"></div>
                         <ul class="links-wrap">
                             <li class="btn btn-link">
                                 <a href="../index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="../work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -156,31 +201,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="../work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -189,7 +248,7 @@
    <div class="container medium once-in">
       <div class="row">
          <div class="flex-col">
-            <h1>Restoran Web Sahifasi</h1>
+            <h1 data-i18n="projectPages.restaurant.title">Restoran Boshqaruv Tizimi</h1>
          </div>
       </div>
    </div>
@@ -199,24 +258,24 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h5>Rol / Xizmatlar</h5>
+            <h5 data-i18n="projectPages.restaurant.role">Rol / Xizmatlar</h5>
             <div class="stripe"></div>
-            <li><p>Web Dizayni</p></li>
-            <li><p>Menyu Boshqaruvi</p></li>
+            <li><p data-i18n="projectPages.restaurant.services.design">Web Dizayni</p></li>
+            <li><p data-i18n="projectPages.restaurant.services.management">Menyu Boshqaruvi</p></li>
          </div>
          <div class="flex-col">
-            <h5>Imkoniyatlar</h5>
+            <h5 data-i18n="projectPages.restaurant.features">Imkoniyatlar</h5>
             <div class="stripe"></div>
-            <li><p>Online bron qilish</p></li>
-            <li><p>Raqamli menyu</p></li>
+            <li><p data-i18n="projectPages.restaurant.featureList.booking">Online bron qilish</p></li>
+            <li><p data-i18n="projectPages.restaurant.featureList.menu">Raqamli menyu</p></li>
          </div>
          <div class="flex-col">
-            <h5>Joylashuv & Yil</h5>
+            <h5 data-i18n="projectPages.restaurant.locationYear">Joylashuv & Yil</h5>
             <div class="stripe"></div>
-            <li><p>O'zbekiston, Toshkent ©</p></li>
-            <li><p>2024</p></li>
+            <li><p data-i18n="projectPages.restaurant.location">O'zbekiston, Toshkent ©</p></li>
+            <li><p data-i18n="projectPages.restaurant.year">2022</p></li>
          </div>
-      </row>
+      </div>
    </div>
 </section>
 
@@ -225,7 +284,7 @@
       <div class="row">
          <div class="flex-col">
             <div class="single-image">
-               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2400&h=1600&fit=crop&q=80" />
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2400&h=1600&fit=crop&q=80" alt="Restaurant Interior" />
             </div>
          </div>
       </div>
@@ -256,7 +315,7 @@
    <div class="row">
       <div class="flex-col">
          <div class="single-image">
-            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=3000&h=2250&fit=crop&q=80" width="3000" height="2250" />   
+            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-3" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=3000&h=2250&fit=crop&q=80" width="3000" height="2250" alt="Restaurant Table Setting" />   
          </div>
       </div>
    </div>
@@ -280,7 +339,7 @@
          <div class="flex-col block-padding-bottom" >
             <div class="device">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="Restaurant Menu Mobile" /> 
                </div>  
                <div class="overlay-device-image">
                   <div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div>
@@ -290,7 +349,7 @@
          <div class="flex-col block-padding-bottom" >
             <div class="device" data-scroll data-scroll-target=".block_2" data-scroll-speed="-1">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="Food Menu Mobile" /> 
                </div>  
                <div class="overlay-device-image">
                   <div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div>
@@ -311,7 +370,7 @@
             <div class="overlay dark-overlay" style="opacity: 0;"></div>             
             <div class="overlay text-overlay theme-dark">
                <div class="container">
-                  <h2>Mazali taomlar, ajoyib tajriba</h2>
+                  <h2 data-i18n="projectPages.restaurant.overlayText">Mazali taomlar, ajoyib tajriba</h2>
                </div>
             </div>
          </div>
@@ -325,7 +384,7 @@
          <div class="flex-col">
             <div class="device">
                <div class="single-image">
-                  <img class="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=600&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1544025162-d76694265947?w=4400&h=2120&fit=crop&q=80" width="4400" height="2120"/>   
+                  <img class="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=600&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1544025162-d76694265947?w=4400&h=2120&fit=crop&q=80" width="4400" height="2120" alt="Restaurant Dashboard"/>   
                </div>
             </div>
          </div>
@@ -342,14 +401,14 @@
 <div class="footer-wrap footer-case-wrap theme-dark" data-scroll-section>
    <section class="section footer" data-scroll data-scroll-speed="-4" data-scroll-position="bottom" data-scroll-offset="-25%, 0%">
       <div class="container medium">
-         <a href="corporate.html" class="row next-case-btn">
+         <a href="portfolio.html" class="row next-case-btn">
             <div class="flex-col">
-               <p>Keyingi loyiha</p>
-               <h2>Korporativ Web Sahifa</h2>
+               <p data-i18n="projectPages.restaurant.nextProject">Keyingi loyiha</p>
+               <h2 data-i18n="projectPages.restaurant.nextProjectName">Portfolio Web Sayti</h2>
             </div>
             <div class="tile-image-wrap">
                <div class="tile-image">
-                  <div class="overlay overlay-image lazy" data-scroll data-scroll-speed="2.5" data-scroll-position="bottom" style="background-color:#B1A994; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80"></div>
+                  <div class="overlay overlay-image lazy" data-scroll data-scroll-speed="2.5" data-scroll-position="bottom" style="background-color:#F5F5F5; background-position: center center; background-repeat: no-repeat; background-size: cover;" data-bg="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop&q=80"></div>
                </div>
             </div>
          </a>
@@ -364,7 +423,7 @@
                   <a href="../work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                      <div class="btn-fill"></div>
                      <span class="btn-text">
-                        <span class="btn-text-inner change">Barcha ishlar<div class="count-nr">11</div></span>
+                        <span class="btn-text-inner change"><span data-i18n="projectPages.restaurant.allWorks">Barcha ishlar</span><div class="count-nr" data-i18n="projectPages.restaurant.worksCount">11</div></span>
                      </span>
                   </a>
                </div>
@@ -375,17 +434,17 @@
          <div class="row bottom-footer">
             <div class="flex-col">
                <div class="credits">
-                  <h5>Versiya</h5>
-                  <p>2025 © Nashr</p>
+                  <h5 data-i18n="footer.version">Versiya</h5>
+                  <p data-i18n="footer.versionText">2025 © Nashr</p>
                </div>
                <div class="time">
-                  <h5>Mahalliy vaqt</h5>
+                  <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                   <p><span id="timeSpan">09:41 PM UZT</span></p>
                </div>
             </div>
             <div class="flex-col">
                <div class="socials">
-                  <h5>Ijtimoiy tarmoqlar</h5>
+                  <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                   <ul>
                      <li class="btn btn-link btn-link-external">
                         <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -424,15 +483,6 @@
    </section>
    <div class="overlay overlay-gradient"></div>
 </div>
-
-<style>
-.block_4 .container {
-  padding: 0;
-}
-
-@media screen and (max-width: 540px) {
-}
-</style>
             </div>
         </main>
         <script src="../../code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -443,6 +493,7 @@
         <script src="../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="../assets/js/locomotive-scroll.min.js"></script>
+        <script src="../assets/js/i18n.js"></script>
         <script defer src="../assets/js/index-new.js"></script>
     </body>
 

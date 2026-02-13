@@ -22,6 +22,41 @@
       <link href="../assets/css/components.css" rel="stylesheet">
       <link href="../assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        /* Language Switcher Styles */
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,8 +72,8 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
                     <h2>E-Commerce Platform<div class="dot"></div></h2>
                     <h2>CRM Tizimi<div class="dot"></div></h2>
                     <h2>Mobile Ilova<div class="dot"></div></h2>
@@ -47,8 +82,8 @@
                     <h2>Sayohat Agentligi<div class="dot"></div></h2>
                     <h2>Admin Dashboard<div class="dot"></div></h2>
                     <h2 class="active">Landing Page<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -58,14 +93,13 @@
         <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single" >
             <div class="mouse-pos-list-image no-select"></div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Keyingi loyiha</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="projectPages.landing.nextProject">Keyingi loyiha</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -78,43 +112,50 @@
                 </div>
                 <div class="fixed-nav-inner">
                     <div class="row nav-row">
-                        <h5>Navigatsiya</h5>
+                        <h5 data-i18n="nav.navigation">Navigatsiya</h5>
                         <div class="stripe"></div>
                         <ul class="links-wrap">
                             <li class="btn btn-link">
                                 <a href="../index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="../work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -163,31 +204,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="../work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -196,7 +251,7 @@
    <div class="container medium once-in">
       <div class="row">
          <div class="flex-col">
-            <h1>Landing Page</h1>
+            <h1 data-i18n="projectPages.landing.title">Landing Page</h1>
          </div>
       </div>
    </div>
@@ -206,22 +261,22 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h5>Rol / Xizmatlar</h5>
+            <h5 data-i18n="projectPages.landing.role">Rol / Xizmatlar</h5>
             <div class="stripe"></div>
-            <li><p>Landing Sahifa Dizayni</p></li>
-            <li><p>Konversiya Optimizatsiyasi</p></li>
+            <li><p data-i18n="projectPages.landing.services.design">Landing Sahifa Dizayni</p></li>
+            <li><p data-i18n="projectPages.landing.services.conversion">Konversiya Optimizatsiyasi</p></li>
          </div>
          <div class="flex-col">
-            <h5>Imkoniyatlar</h5>
+            <h5 data-i18n="projectPages.landing.features">Imkoniyatlar</h5>
             <div class="stripe"></div>
-            <li><p>Responsive dizayn</p></li>
-            <li><p>SEO optimizatsiya</p></li>
+            <li><p data-i18n="projectPages.landing.featureList.responsive">Responsive dizayn</p></li>
+            <li><p data-i18n="projectPages.landing.featureList.seo">SEO optimizatsiya</p></li>
          </div>
          <div class="flex-col">
-            <h5>Joylashuv & Yil</h5>
+            <h5 data-i18n="projectPages.landing.locationYear">Joylashuv & Yil</h5>
             <div class="stripe"></div>
-            <li><p>O'zbekiston, Toshkent ©</p></li>
-            <li><p>2024</p></li>
+            <li><p data-i18n="projectPages.landing.location">O'zbekiston, Toshkent ©</p></li>
+            <li><p data-i18n="projectPages.landing.year">2021</p></li>
          </div>
       </div>
    </div>
@@ -232,7 +287,7 @@
       <div class="row">
          <div class="flex-col">
             <div class="single-image">
-               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2400&h=1600&fit=crop&q=80" />
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2400&h=1600&fit=crop&q=80" alt="Landing Page Design" />
             </div>
          </div>
       </div>
@@ -277,7 +332,7 @@
          <div class="flex-col block-padding-bottom" >
             <div class="device">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=776&h=1684&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=776&h=1684&fit=crop&q=80" width="776" height="1684" /> 
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=776&h=1684&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=776&h=1684&fit=crop&q=80" width="776" height="1684" alt="Landing Page Mobile" /> 
                </div>  
                <div class="overlay-device-image">
                   <div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div>
@@ -304,7 +359,7 @@
    <div class="row">
       <div class="flex-col">
          <div class="single-image">
-            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-5" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=2880&h=2160&fit=crop&q=80" width="2880" height="2160" />   
+            <img class="overlay overlay-image lazy" data-scroll data-scroll-speed="-5" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=900&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=2880&h=2160&fit=crop&q=80" width="2880" height="2160" alt="Landing Page Full View" />   
          </div>
       </div>
    </div>
@@ -318,7 +373,7 @@
                <div class="single-image">
                   <div class="overlay overlay-image">
                      <div class="parallax-image-wrap">
-                        <img class="lazy" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1728&h=1501&fit=crop&q=80" width="1728" height="1501" data-scroll data-scroll-speed="1.5"/>
+                        <img class="lazy" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1728&h=1501&fit=crop&q=80" width="1728" height="1501" data-scroll data-scroll-speed="1.5" alt="Landing Page Content"/>
                      </div>
                   </div>   
                </div>
@@ -361,8 +416,8 @@
       <div class="container medium">
          <a href="ecommerce.html" class="row next-case-btn">
             <div class="flex-col">
-               <p>Keyingi loyiha</p>
-               <h2>E-Commerce Platform</h2>
+               <p data-i18n="projectPages.landing.nextProject">Keyingi loyiha</p>
+               <h2 data-i18n="projectPages.landing.nextProjectName">E-Commerce Platform</h2>
             </div>
             <div class="tile-image-wrap">
                <div class="tile-image">
@@ -381,7 +436,7 @@
                   <a href="../work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                      <div class="btn-fill"></div>
                      <span class="btn-text">
-                        <span class="btn-text-inner change">Barcha ishlar<div class="count-nr">11</div></span>
+                        <span class="btn-text-inner change"><span data-i18n="projectPages.landing.allWorks">Barcha ishlar</span><div class="count-nr" data-i18n="projectPages.landing.worksCount">11</div></span>
                      </span>
                   </a>
                </div>
@@ -392,17 +447,17 @@
          <div class="row bottom-footer">
             <div class="flex-col">
                <div class="credits">
-                  <h5>Versiya</h5>
-                  <p>2025 © Nashr</p>
+                  <h5 data-i18n="footer.version">Versiya</h5>
+                  <p data-i18n="footer.versionText">2025 © Nashr</p>
                </div>
                <div class="time">
-                  <h5>Mahalliy vaqt</h5>
+                  <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                   <p><span id="timeSpan">09:41 PM UZT</span></p>
                </div>
             </div>
             <div class="flex-col">
                <div class="socials">
-                  <h5>Ijtimoiy tarmoqlar</h5>
+                  <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                   <ul>
                      <li class="btn btn-link btn-link-external">
                         <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -451,6 +506,7 @@
         <script src="../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="../assets/js/locomotive-scroll.min.js"></script>
+        <script src="../assets/js/i18n.js"></script>
         <script defer src="../assets/js/index-new.js"></script>
     </body>
 

@@ -22,6 +22,44 @@
       <link href="../assets/css/components.css" rel="stylesheet">
       <link href="../assets/css/style-new.css" rel="stylesheet">
       
+      <style>
+        .btn-lang-switcher {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-lang-switcher .btn-click {
+          cursor: pointer;
+        }
+        
+        .btn-lang-switcher .btn-text-inner {
+          font-weight: 600;
+          font-size: 14px;
+          user-select: none;
+          transition: opacity 0.2s ease;
+        }
+        
+        .btn-lang-switcher:hover .btn-text-inner {
+          opacity: 0.7;
+        }
+        
+        .fixed-nav .btn-lang-switcher {
+          margin-top: 10px;
+        }
+        
+        .fixed-nav .btn-lang-switcher .btn-text-inner {
+          font-size: 16px;
+        }
+        
+        [data-i18n] {
+          transition: opacity 0.2s ease;
+        }
+
+        .block-fullwidth {
+          background: #000;
+        }
+      </style>
+      
    </head>
 
     <body data-barba="wrapper">
@@ -37,13 +75,13 @@
                     <h2 class="home-active">Xush kelibsiz<div class="dot"></div></h2>
                     <h2 class="home-active">Marhaba<div class="dot"></div></h2>
                     <h2 class="home-active-last">Hello<div class="dot"></div></h2>
-                    <h2>Bosh sahifa<div class="dot"></div></h2>
-                    <h2>Xizmatlar<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.home">Bosh sahifa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.services">Xizmatlar<div class="dot"></div></h2>
                     <h2>E-Commerce Platform<div class="dot"></div></h2>
                     <h2>CRM Tizimi<div class="dot"></div></h2>
                     <h2 class="active">Mobile Ilova<div class="dot"></div></h2>
-                    <h2>Biz haqimizda<div class="dot"></div></h2>
-                    <h2>Aloqa<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.about">Biz haqimizda<div class="dot"></div></h2>
+                    <h2 data-i18n="nav.contact">Aloqa<div class="dot"></div></h2>
                 </div>
                 <div class="rounded-div-wrap bottom">
                     <div class="rounded-div"></div>
@@ -53,14 +91,13 @@
         <main class="main" id="work-single" data-barba="container" data-barba-namespace="work-single" >
             <div class="mouse-pos-list-image no-select"></div>
             <div class="mouse-pos-list-btn no-select"></div>
-            <div class="mouse-pos-list-span no-select"><p>Keyingi loyiha</p></div>
+            <div class="mouse-pos-list-span no-select"><p data-i18n="projectPages.mobile.nextProject">Keyingi loyiha</p></div>
             
             <div class="btn btn-hamburger">
                 <div class="btn-click magnetic" data-strength="50" data-strength-text="25">
                     <div class="btn-fill"></div>
                     <div class="btn-text">
                         <div class="btn-bars"></div>
-                        <span class="btn-text-inner">Menyu</span>
                     </div>
                 </div>
             </div>
@@ -73,43 +110,50 @@
                 </div>
                 <div class="fixed-nav-inner">
                     <div class="row nav-row">
-                        <h5>Navigatsiya</h5>
+                        <h5 data-i18n="nav.navigation">Navigatsiya</h5>
                         <div class="stripe"></div>
                         <ul class="links-wrap">
                             <li class="btn btn-link">
                                 <a href="../index.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Bosh sahifa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.home">Bosh sahifa</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link active">
                                 <a href="../work.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Xizmatlar</span>
+                                    <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../about.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Biz haqimizda</span>
+                                    <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
                                 </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="../contact.html" class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">Aloqa</span>
+                                    <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
                                 </span>
                                 </a>
+                            </li>
+                            <li class="btn btn-link btn-lang-switcher">
+                                <div class="btn-click magnetic lang-switcher-btn" data-strength="24" data-strength-text="12">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner current-lang">RU</span>
+                                </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="row social-row">
                         <div class="stripe"></div>
                         <div class="socials">
-                            <h5>Ijtimoiy tarmoqlar</h5>
+                            <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                             <ul>
                                 <li class="btn btn-link btn-link-external">
                                     <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -158,31 +202,45 @@
         </div>
     </div>
     <ul class="links-wrap">
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
+                </div>
+            </div>
+        </li>
         <li class="btn btn-link active">
             <a href="../work.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Xizmatlar</span>
+                <span class="btn-text-inner" data-i18n="nav.services">Xizmatlar</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../about.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Biz haqimizda</span>
+                <span class="btn-text-inner" data-i18n="nav.about">Biz haqimizda</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link">
             <a href="../contact.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
             <span class="btn-text">
-                <span class="btn-text-inner">Aloqa</span>
+                <span class="btn-text-inner" data-i18n="nav.contact">Aloqa</span>
             </span>
             </a>
         </li>
         <li class="btn btn-link btn-menu">
             <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
                 <div class="btn-text">
-                    <span class="btn-text-inner">Menyu</span>
+                    <span class="btn-text-inner" data-i18n="nav.menu">Menyu</span>
+                </div>
+            </div>
+        </li>
+        <li class="btn btn-link btn-lang-switcher">
+            <div class="btn-click magnetic lang-switcher-btn" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner current-lang">RU</span>
                 </div>
             </div>
         </li>
@@ -191,7 +249,7 @@
    <div class="container medium once-in">
       <div class="row">
          <div class="flex-col">
-            <h1>Mobile Ilova</h1>
+            <h1 data-i18n="projectPages.mobile.title">Mobile Ilova</h1>
          </div>
       </div>
    </div>
@@ -201,23 +259,23 @@
    <div class="container medium">
       <div class="row">
          <div class="flex-col">
-            <h5>Rol / Xizmatlar</h5>
+            <h5 data-i18n="projectPages.mobile.role">Rol / Xizmatlar</h5>
             <div class="stripe"></div>
-            <li><p>Mobile Development</p></li>
-            <li><p>React Native & Expo</p></li>
+            <li><p data-i18n="projectPages.mobile.services.development">Mobile Development</p></li>
+            <li><p data-i18n="projectPages.mobile.services.reactnative">React Native & Expo</p></li>
          </div>
          <div class="flex-col">
-            <h5>Texnologiyalar</h5>
+            <h5 data-i18n="projectPages.mobile.tech">Texnologiyalar</h5>
             <div class="stripe"></div>
-            <li><p>React Native</p></li>
-            <li><p>Expo SDK</p></li>
-            <li><p>TypeScript</p></li>
+            <li><p data-i18n="projectPages.mobile.technologies.reactnative">React Native</p></li>
+            <li><p data-i18n="projectPages.mobile.technologies.expo">Expo SDK</p></li>
+            <li><p data-i18n="projectPages.mobile.technologies.typescript">TypeScript</p></li>
          </div>
          <div class="flex-col">
-            <h5>Joylashuv & Yil</h5>
+            <h5 data-i18n="projectPages.mobile.locationYear">Joylashuv & Yil</h5>
             <div class="stripe"></div>
-            <li><p>O'zbekiston, Toshkent ©</p></li>
-            <li><p>2024</p></li>
+            <li><p data-i18n="projectPages.mobile.location">O'zbekiston, Toshkent ©</p></li>
+            <li><p data-i18n="projectPages.mobile.year">2024</p></li>
          </div>
       </div>
    </div>
@@ -228,7 +286,7 @@
       <div class="row">
          <div class="flex-col">
             <div class="single-image">
-               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-512941937669-90a1b58e7e9c?w=2400&h=1600&fit=crop&q=80" />
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=800&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2400&h=1600&fit=crop&q=80" alt="Mobile App Development" />
             </div>
          </div>
       </div>
@@ -273,7 +331,7 @@
          <div class="flex-col block-padding-bottom" >
             <div class="device">
                <div class="single-image">
-                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=540&h=1170&fit=crop&q=80" width="540" height="1170" /> 
+                  <img class="overlay overlay-image lazy" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=540&h=1170&fit=crop&q=80" data-src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=540&h=1170&fit=crop&q=80" width="540" height="1170" alt="Mobile App Interface" /> 
                </div>  
                <div class="overlay-device-image">
                   <div class="overlay overlay-device" style="background: url('../assets/img/device-iphone13-nonotch.png') center center no-repeat; background-size: cover;"></div>
@@ -327,8 +385,8 @@
       <div class="container medium">
          <a href="web-development.html" class="row next-case-btn">
             <div class="flex-col">
-               <p>Keyingi loyiha</p>
-               <h2>Web Development</h2>
+               <p data-i18n="projectPages.mobile.nextProject">Keyingi loyiha</p>
+               <h2 data-i18n="projectPages.mobile.nextProjectName">Web Development</h2>
             </div>
             <div class="tile-image-wrap">
                <div class="tile-image">
@@ -347,7 +405,7 @@
                   <a href="../work.html" class="btn-click magnetic" data-strength="25" data-strength-text="15">
                      <div class="btn-fill"></div>
                      <span class="btn-text">
-                        <span class="btn-text-inner change">Barcha ishlar<div class="count-nr">11</div></span>
+                        <span class="btn-text-inner change"><span data-i18n="projectPages.mobile.allWorks">Barcha ishlar</span><div class="count-nr" data-i18n="projectPages.mobile.worksCount">11</div></span>
                      </span>
                   </a>
                </div>
@@ -358,17 +416,17 @@
          <div class="row bottom-footer">
             <div class="flex-col">
                <div class="credits">
-                  <h5>Versiya</h5>
-                  <p>2025 © Nashr</p>
+                  <h5 data-i18n="footer.version">Versiya</h5>
+                  <p data-i18n="footer.versionText">2025 © Nashr</p>
                </div>
                <div class="time">
-                  <h5>Mahalliy vaqt</h5>
+                  <h5 data-i18n="footer.localTime">Mahalliy vaqt</h5>
                   <p><span id="timeSpan">09:41 PM UZT</span></p>
                </div>
             </div>
             <div class="flex-col">
                <div class="socials">
-                  <h5>Ijtimoiy tarmoqlar</h5>
+                  <h5 data-i18n="footer.socials">Ijtimoiy tarmoqlar</h5>
                   <ul>
                      <li class="btn btn-link btn-link-external">
                         <a href="https://www.instagram.com/euphoriaservice/" target="_blank" class="btn-click magnetic" data-strength="20" data-strength-text="10">
@@ -407,12 +465,6 @@
    </section>
    <div class="overlay overlay-gradient"></div>
 </div>
-
-<style>
-.block-fullwidth {
-   background: #000;
-}
-</style>
             </div>
         </main>
         <script src="../../code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -423,6 +475,7 @@
         <script src="../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.6.1/dist/lazyload.min.js"></script>
         
         <script src="../assets/js/locomotive-scroll.min.js"></script>
+        <script src="../assets/js/i18n.js"></script>
         <script defer src="../assets/js/index-new.js"></script>
     </body>
 
